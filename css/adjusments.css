@@ -1,0 +1,11 @@
+#header, #footer {
+  border-color: var(--cor-8) !important;
+}
+
+#main-home {
+  padding: 140px 0px;
+  background: url("../img/bg-main-2.svg"), var(--grad-2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+}
