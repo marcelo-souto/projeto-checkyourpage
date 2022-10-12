@@ -13,7 +13,8 @@
 
 .btn-1 {
   background-image: var(--grad-1);
-  color: #191C1A;
+  color: #191C1A !important;
+  text-decoration: none !important;
 }
 
 .btn-2 {
