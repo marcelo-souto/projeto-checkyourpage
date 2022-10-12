@@ -34,9 +34,9 @@
 
   <body id="homepage">
     <!-- Header -->
-    <header id="header" class="border-bottom fonte-corpo bg-grad-2">
+    <header id="header" class="border-bottom fonte-corpo bg-grad-2 position-fixed w-100">
       <nav class="container navbar navbar-expand-sm">
-        <a class="navbar-brand d-sm-none" href="#"
+        <a class="navbar-brand opacity-0" href="#"
           ><img width="160" src="./img/logo.svg" alt="check your page logo"
         /></a>
         <button
@@ -101,7 +101,7 @@
           <img class="col-8" src="./img/logo.svg" alt="check your page" />
         </div>
         <div class="row justify-content-center fonte-titulo-m mb-5">
-          <p class="h5 mt-3 fonte-satoshi font-weight-normal cor-4">
+          <p class="h5 mt-3 fonte-satoshi font-weight-normal cor-4 text-center">
             Responsividade, acessibilidade e semântica.
           </p>
         </div>
@@ -116,7 +116,7 @@
     <section id="sec-1" class="container my-sm-5 py-sm-5 my-3 py-3">
       <div class="row">
         <div class="col-md">
-          <h2 class="fonte-satoshi font-weight-bold display-4 mb-5">
+          <h2 class="fonte-satoshi font-weight-bold display-4 mb-4 mb-sm-5 titulo-xl">
             Texto com a chamada do produto
           </h2>
           <p class="fonte-corpo cor-7 mr-sm-5">
@@ -140,7 +140,7 @@
     <section id="sec-2" class="bg-grad-2 padding-x-80">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-4 card-section border-right">
+          <div class="col-md-4 card-section border-right mt-4 mt-md-5">
             <div class="row justify-content-center mb-5">
               <img
                 src="./img/icones-main-home/AspectRatio.svg"
@@ -148,7 +148,7 @@
               />
             </div>
             <h3
-              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4"
+              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4 titulo-l"
             >
               Responsividade
             </h3>
@@ -159,7 +159,7 @@
             </p>
           </div>
 
-          <div class="col-md-4 card-section border-right mt-5 mt-md-0">
+          <div class="col-md-4 card-section border-right mt-4 mt-md-5">
             <div class="row justify-content-center mb-5">
               <img
                 src="./img/icones-main-home/HandIndex.svg"
@@ -167,7 +167,7 @@
               />
             </div>
             <h3
-              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4"
+              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4 titulo-l"
             >
               Acessibilidade
             </h3>
@@ -178,14 +178,14 @@
             </p>
           </div>
           <div class="col-md-4 mt-5 mt-md-0">
-            <div class="row justify-content-center mb-5 mt-5 mt-md-0">
+            <div class="row justify-content-center mb-5 mt-4 mt-md-5">
               <img
                 src="./img/icones-main-home/MenuButton.svg"
                 alt="icone de um menu semantico"
               />
             </div>
             <h3
-              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4"
+              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4 titulo-l"
             >
               Semântica
             </h3>
@@ -203,7 +203,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10">
-            <h2 class="fonte-satoshi font-weight-bold display-4 mb-5">
+            <h2 class="fonte-satoshi font-weight-bold display-4 mb-4 mb-sm-5 titulo-xl">
               Inscreva-se na nossa lista de espera
             </h2>
           </div>
@@ -237,10 +237,10 @@
         </div>
         <div class="row">
           <div class="col-6 col-md-5">
-            <input class="w-100 h-100 p-2" type="text" id="nome" />
+            <input class="w-100 h-100 p-2 cor-4" type="text" id="nome" />
           </div>
           <div class="col-6 col-md-5">
-            <input class="w-100 h-100 p-2" type="email" id="email" />
+            <input class="w-100 h-100 p-2 cor-4" type="email" id="email" />
           </div>
           <div class="col-12 col-sm-2 mt-4 mt-md-0">
             <button class="btn-1">continuar</button>
@@ -328,7 +328,7 @@
           </div>
         </div>
       </div>
-      <div class="row border-top w-100 mt-5 py-4">
+      <div class="row border-top w-100 mt-0 mt-sm-5 py-4">
         <div class="container">
           <p class="container fonte-corpo cor-7 mb-0">
             © Alguns direitos reservados. 2022
@@ -336,6 +336,8 @@
         </div>
       </div>
     </footer>
+
+    <button class="btn-voltar-cima btn-1 p-2 rounded-circle"><img src="./img/seta-para-cima.svg" alt="seta para cima"></button>
 
     <!-- Script Jquery -->
     <script
@@ -355,5 +357,6 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

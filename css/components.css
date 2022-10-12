@@ -20,3 +20,19 @@
   background-color: var(--cor-9);
   color: #DCDCDC;
 }
+
+.btn-1:hover {
+  background: linear-gradient(180deg, #00ff8cda -3.11%, #38db8ad9 71.4%);
+}
+
+.btn-2:hover {
+  background-color: #202020;
+}
+
+.btn-voltar-cima {
+  position: fixed;
+  bottom: -60px;
+  /* bottom: 16px; */
+  right: 16px;
+  transition: .5s;
+}

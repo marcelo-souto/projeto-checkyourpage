@@ -30,6 +30,21 @@
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  .titulo-xl {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .titulo-xl {
+    font-size: 2rem;
+  }
+  .titulo-l {
+    font-size: 1.5rem;
+  }
+}
+
 /* Classes Cores de Fontes */
 .cor-0 {
   color: var(--cor-0);
