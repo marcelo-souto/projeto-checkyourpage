@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 #header,
 .card-section,
 #footer > div {
@@ -21,9 +25,10 @@
 }
 
 #sec-3{
-  background: url("../img/decorador-home.svg");
-  background-repeat: no-repeat;
+  background: url("../img/decorador-home-2.svg");
+  background-repeat: repeat-y;
   background-position: 1100px center;
+  background-attachment: fixed;
 }
 
 a {
@@ -33,6 +38,10 @@ a {
 #footer a:hover, #header a:hover {
   color: #f5f5f5;
   filter: brightness(1.5) contrast(92%);
+}
+
+#footer h3 {
+  letter-spacing: 0.2rem;
 }
 
 .opacity-0 {
@@ -46,9 +55,11 @@ a {
 .max-width-30ch {
   max-width: 30ch;
 }
+
 .formulario {
   background-color: #1e1e1e;
 }
+
 .formulario input {
   background-color: #232323;
   border: 1px solid #2c2c2c;
