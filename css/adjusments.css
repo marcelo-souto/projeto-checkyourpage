@@ -1,4 +1,4 @@
-#header, #footer {
+#header, .card-section, #footer > div {
   border-color: var(--cor-8) !important;
 }
 
@@ -8,4 +8,42 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+#sec-2 > div {
+  max-width: 1160px;
+}
+
+#sec-3 {
+  background: url("../img/decorador-home.svg");
+  background-repeat: no-repeat;
+  background-position: 1000px;
+}
+
+.padding-x-80 {
+  padding: 80px 0px;
+}
+
+.max-width-30ch {
+  max-width: 30ch;
+}
+.formulario {
+  background-color: #1E1E1E;
+}
+.formulario input {
+  background-color: #232323;
+  border: 1px solid #2C2C2C;
+}
+
+@media (max-width: 768px) {
+  #sec-2 {
+    border: none;
+  }
+}
+
+
+@media (max-width: 576px) {
+  #main-home {
+    padding: 80px 0px;
+  }
 }

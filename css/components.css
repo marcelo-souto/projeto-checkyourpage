@@ -5,6 +5,7 @@
   padding: 12px 24px;
   border-radius: 4px;
   cursor: pointer;
+  border: none;
   outline: none !important;
   max-width: max-content;
   transition: .3s;

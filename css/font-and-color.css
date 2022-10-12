@@ -4,6 +4,7 @@
   --grad-2: linear-gradient(265.42deg, #1D1D1D -3.1%, #141414 102.34%);
 
   /* Cores Secubdárias de Apoio */
+  --cor-0: #FFFFFF;
   --cor-4: #C9C9C9;
   --cor-5: #A4A4A4;
   --cor-7: #656565;
@@ -22,6 +23,7 @@
 
 .fonte-corpo {
   font-family: "Roboto", sans-serif;
+  line-height: 1.8;
 }
 
 .font-weight-medium {
@@ -29,6 +31,9 @@
 }
 
 /* Classes Cores de Fontes */
+.cor-0 {
+  color: var(--cor-0);
+}
 .cor-4 {
   color: var(--cor-4);
 }
