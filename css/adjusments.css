@@ -20,10 +20,10 @@
   max-width: 1160px;
 }
 
-#sec-3 {
+#sec-3{
   background: url("../img/decorador-home.svg");
   background-repeat: no-repeat;
-  background-position: 1000px;
+  background-position: 1100px center;
 }
 
 a {
@@ -61,12 +61,25 @@ a {
   border-color: #383838;
 }
 
+@media (max-width: 1600px) {
+  #sec-3 {
+    background-position: 900px center !important;
+  }
+}
+@media (max-width: 1200px) {
+  #sec-3 {
+    background-position: 600px center !important;
+  }
+}
 @media (max-width: 768px) {
   #sec-2 {
     border: none;
   }
   .padding-x-80 {
     padding: 60px 0px;
+  }
+  #sec-3 {
+    background-position: 600px center !important;
   }
 }
 
