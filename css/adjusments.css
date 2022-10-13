@@ -96,7 +96,7 @@ a {
 
 @media (max-width: 576px) {
   #main-home {
-    padding: 80px 0px;
+    padding: 140px 0 80px 0;
   }
   .max-width-30ch {
     max-width: 40ch;
