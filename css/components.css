@@ -37,3 +37,35 @@
   right: 16px;
   transition: .5s;
 }
+
+
+.layer {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  animation: spin 1s infinite;
+  width: 100px;
+  height: 100px;
+  border: 12px solid #ffffff;
+  border-top-color: var(--cor-p1);
+  border-right-color: var(--cor-p1);
+  border-bottom-color: var(--cor-p1);
+  border-radius: 50%;
+  opacity: 1;
+  transition: .3s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}

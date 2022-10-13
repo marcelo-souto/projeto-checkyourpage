@@ -7,6 +7,15 @@
     <link rel="shortcut icon" href="./img/logo-menu.svg" type="svg+xml">
     <title>Check Your Page</title>
 
+    <script>
+      window.onload = () => {
+        document.querySelector(".layer").style.opacity = 0;
+        setTimeout(() => {
+          document.querySelector(".layer").style.display = 'none';
+        }, 1000)
+      }
+    </script>
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -34,6 +43,9 @@
   </head>
 
   <body id="homepage">
+    <div class="layer">
+      <div class="loader"></div>
+    </div>
     <!-- Header -->
     <header
       id="header"

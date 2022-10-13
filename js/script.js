@@ -80,4 +80,3 @@ window.addEventListener('scroll', debounce (function () {
   animate()
   showElements()
 }, 200))
-
