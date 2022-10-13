@@ -56,9 +56,28 @@ if (btnContinuar) {
 }
 
 
+// funcao para diminuir a chamada da funcao
+const debounce = (func, wait, immediate) => {
+  let timeout;
+
+  return function(...args) {
+    const context = this;
+    const later = () => {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+    const callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+};
+
+
 animate()
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', debounce (function () {
   animate()
   showElements()
-})
+}, 200))
+
