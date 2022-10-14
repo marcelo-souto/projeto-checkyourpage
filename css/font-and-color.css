@@ -1,0 +1,75 @@
+:root {
+  /* Gradientes */
+  --grad-1: linear-gradient(180deg, #00FF8D -3.11%, #38DB8A 71.4%);
+  --grad-2: linear-gradient(265.42deg, #1D1D1D -3.1%, #141414 102.34%);
+
+  /* Cores Secubdárias de Apoio */
+  --cor-0: #FFFFFF;
+  --cor-4: #C9C9C9;
+  --cor-5: #A4A4A4;
+  --cor-7: #656565;
+
+  --cor-8: #282828;
+  --cor-9: #141414;
+
+  /* Cores Primárias */
+  --cor-p1: #0FF58C;
+}
+
+/* Estilos Tipográficos */
+.fonte-satoshi {
+  font-family: "Satoshi", sans-serif;
+}
+
+.fonte-corpo {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.8;
+}
+
+.font-weight-medium {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .titulo-xl {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .titulo-xl {
+    font-size: 2rem;
+  }
+  .titulo-l {
+    font-size: 1.5rem;
+  }
+}
+
+/* Classes Cores de Fontes */
+.cor-0 {
+  color: var(--cor-0);
+}
+.cor-4 {
+  color: var(--cor-4);
+}
+
+.cor-5 {
+  color: var(--cor-5);
+}
+
+.cor-7 {
+  color: var(--cor-7);
+}
+
+.cor-p1 {
+  color: var(--cor-p1);
+}
+
+/* Classes Backgrounds */
+.bg-grad-1 {
+  background-image: var(--grad-1);
+}
+
+.bg-grad-2 {
+  background-image: var(--grad-2);
+}
