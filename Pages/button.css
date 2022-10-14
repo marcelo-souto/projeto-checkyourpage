@@ -1,29 +1,34 @@
-button {
-    --primary-color: #645bff;
-    --secondary-color: #fff;
-    --hover-color: #111;
+#bttn {
+    --primary-color: #74e0af;
+    --secondary-color: rgb(0, 0, 0);
+    --hover-color: rgb(56, 56, 56);
     --arrow-width: 10px;
     --arrow-stroke: 2px;
     box-sizing: border-box;
     border: 0;
     border-radius: 20px;
     color: var(--secondary-color);
-    padding: 1em 1.8em;
+    padding: 1em 1.6em;
     background: var(--primary-color);
     display: flex;
     transition: 0.2s background;
     align-items: center;
     gap: 0.6em;
     font-weight: bold;
+    justify-content: center;
+    font-size: small;
+    margin-left: 900px;
+    filter:opacity(1.2);
+    color: black;
 }
 
-button .arrow-wrapper {
+#bttn .arrow-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-button .arrow {
+#bttn .arrow {
     margin-top: 1px;
     width: var(--arrow-width);
     background: var(--primary-color);
@@ -32,7 +37,7 @@ button .arrow {
     transition: 0.2s;
 }
 
-button .arrow::before {
+#bttn .arrow::before {
     content: "";
     box-sizing: border-box;
     position: absolute;
@@ -46,15 +51,17 @@ button .arrow::before {
     transform: rotate(-45deg);
 }
 
-button:hover {
+#bttn:hover {
     background-color: var(--hover-color);
     cursor: pointer;
+    color: white;
+    filter: opacity(1);
 }
 
-button:hover .arrow {
+#bttn:hover .arrow {
     background: var(--secondary-color);
 }
 
-button:hover .arrow:before {
+#bttn:hover .arrow:before {
     right: 0;
 }

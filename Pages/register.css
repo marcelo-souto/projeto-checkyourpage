@@ -85,6 +85,10 @@ body {
     margin-top: 30px;
 }
 
+#account {
+padding-left: 850px;
+}
+
 small {
     font-size: 12px;
     padding-left: 10px;
