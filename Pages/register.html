@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="../Pages/register.css">
 
 
-    <title>Register||CheckYourPage</title>
+    <title>Register||Check Your Page</title>
 </head>
 
 <body>
@@ -58,7 +58,8 @@
                                 <a href="./cadastro.html" id="navcadastro" class="nav-link">Cadastre-se</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://www.github.com/marcelo-souto/projeto-checkyourpage" id="" class="nav-link bi-github" style="font-size: 1.5em; margin: 1px"></a>
+                                <a href="https://www.github.com/marcelo-souto/projeto-checkyourpage" id=""
+                                    class="nav-link bi-github" style="font-size: 1.5em; margin: 1px"></a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" id="" class="nav-link bi-twitter" style="font-size: 1.5em; margin: 1px"></a>
@@ -118,7 +119,7 @@
 
                         <label for="confirm">Confirmar Senha</label>
                         <input type="password" name="cofirm" id="confirm" class="form-control inputs"
-                            onkeyup=" confirmarPassword()" required>
+                            onkeyup="  confirmarPassword()" required>
 
                         <label for="rg">RG
                             <span id="obrigatorio">*</span>
@@ -162,7 +163,7 @@
                             </div>
 
                             <div>
-                                <label for="numero">Número</label>
+                                <label for="numero">Número<span id="obrigatorio"> *</span></label>
                                 <input type="text" name="numero" id="numero" class="form-control inputs"
                                     onblur="validarNumero(this.value)" required>
                             </div>
@@ -174,7 +175,11 @@
                     </div>
                 </div>
 
-                <button data-tilt id="bttn">
+                <!-- Texto do Cadastro Efetuado -->
+
+                <h6 class="text-center text-light"></h6>
+
+                <button data-tilt id="bttn" class="cadastro-btn">
                     Cadastre-se
                     <div class="arrow-wrapper">
                         <div class="arrow"></div>
@@ -192,66 +197,89 @@
 
     <!-- Footer -->
 
-    <footer class="bg-dark text-light p-2 pulse">
-        <div class="container">
-            <div class="footer pt-5 pl-4 mb-4 d-flex justify-content-between bg-dark">
-                <div class="logorede">
-                    <a href="../index.html" class="logo">
-                    </a>
-                    <div class="redesocial">
+    <footer id="footer" class="bg-grad-2 padding-x-80 pb-0 pt-lg-5 text-light">
+        <div class="container" data-anime="top">
+            <div class="row">
+                <div class="col-md mb-5 mb-md-0">
+                    <img src="../img/logo.svg" width="160" alt="check your page" />
+                </div>
+                <div class="col-md mb-5 mb-md-0">
+                    <h3 class="h4 fonte-satoshi cor-0 text-uppercase mb-4" id="contact">contato</h3>
 
-                        <a href="https://instagram.com">
-                            <h4>
-                                <i class="bi bi-instagram text-light "></i>
-                            </h4>
-                        </a>
-                        <h4>
-                            <i class="bi bi-linkedin"></i>
-                        </h4>
-                        <h4>
-                            <i class="bi bi-facebook"></i>
-                        </h4>
-                        <h4>
-                            <i class="bi bi-youtube"></i>
-                        </h4>
-                    </div>
+                    <ul class="list-unstyled mb-5">
+                        <li>
+                            <a class="text-light" href="tel:+552145093000" id="footercontact">(21) 4509-3000</a>
+                        </li>
+                        <li>
+                            <a class="text-light" href="mailto:email@frontenders.com"
+                                id="footercontact">email@frontenders.com</a>
+                        </li>
+                    </ul>
+
+                    <address>
+                        <p class="fonte-corpo cor-5 mb-0">Rua das Arvores, 2568</p>
+                        <p class="fonte-corpo cor-5">Campo Grande - MS</p>
+                    </address>
+
+                    <ul class="list-unstyled d-flex align-items-center">
+                        <li class="mr-3">
+                            <a href="#">
+                                <img src="../img/icones-redes/Twitter.svg" width="28" height="28" alt="twitter" />
+                            </a>
+                        </li>
+                        <li class="mr-3">
+                            <a href="#">
+                                <img src="../img/icones-redes/Facebook.svg" width="28" height="28" alt="facebook" />
+                            </a>
+                        </li>
+                        <li class="mr-3">
+                            <a href="#">
+                                <img src="../img/icones-redes/YouTube.svg" width="28" height="28" alt="youtube" />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="../img/icones-redes/Discord.svg" width="28" height="28" alt="discord" />
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <ul class="footer-contato">
-                    <li>
-                        <strong>FrontEnders</strong>
-                    </li>
-                    <li>Rio de Janeiro, Rj</li>
-                    <li>CEP 23080-020</li>
-                    <li>
-                        <a href="tel:+5592999999999">+55 (021)2018-5866</a>
-                    </li>
-                    <li>
-                        <a href="mailto:contato@frontenders.com">contato@frontenders.com</a>
-                    </li>
-                </ul>
-
-                <ul class="footer-links ">
-                    <li>
-                        <a href="../index.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="./sobre.html">Produtos</a>
-                    </li>
-                    <li>
-                        <a href="./contato.html">Contato</a>
-                    </li>
-                </ul>
+                <div class="col-md">
+                    <h3 class="h4 fonte-satoshi cor-0 text-uppercase mb-4" id="contact">
+                        informações
+                    </h3>
+                    <ul class="list-unstyled mb-5">
+                        <li>
+                            <a class="fonte-corpo cor-5 text-light" href="#">Home</a>
+                        </li>
+                        <li>
+                            <a class="fonte-corpo cor-5 text-light" href="#">Minha Conta</a>
+                        </li>
+                        <li>
+                            <a class="fonte-corpo cor-5 text-light" href="#">Nossos Produtos</a>
+                        </li>
+                        <li>
+                            <a class="fonte-corpo cor-5 text-light" href="#">Planos</a>
+                        </li>
+                        <li>
+                            <a class="fonte-corpo cor-5 text-light" href="#">Lista de Espera</a>
+                        </li>
+                        <li>
+                            <a class="fonte-corpo cor-5 text-light" href="#">Nossa Equipe</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="copyright bg-dark d-flex justify-content-center">
-            <p>© Alguns direitos reservados © 2022 - Desenvolvido por FrontEnders</p>
+        <div class="row border-top w-80 mt-0 mt-sm-5 py-4">
+            <div class="container">
+                <p class="container fonte-corpo mb-0">
+                    © Alguns direitos reservados. 2022
+                </p>
+            </div>
         </div>
-        <button class="btn-voltar-cima btn-1 p-2 rounded-circle" style="z-index: 1;">
-            <img src="../img/seta-para-cima.svg" alt="seta para cima" />
-        </button>
     </footer>
-
 
     <!-- FOOTER -->
 

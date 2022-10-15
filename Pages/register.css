@@ -12,6 +12,14 @@ body {
     overflow-x: hidden;
 }
 
+/* Header / Nav */
+
+header {
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    background: #1F1F1F;
+    padding: 30px;
+}
+
 .fazerlogin {
     color: #357c5c;
 }
@@ -23,7 +31,8 @@ body {
 #imgg {
     background-image: url(../img/bg-main-2.svg);
     background-repeat: no-repeat;
-    background-position: 1px;
+    background-size: cover;
+    background-position: top center;
 }
 
 #home {
@@ -53,6 +62,8 @@ body {
 #navmenu {
     font-family: Roboto, sans-serif;
 }
+
+/* Formulário */
 
 .form-layout {
     color: #36f39e;
@@ -86,7 +97,7 @@ body {
 }
 
 #account {
-padding-left: 850px;
+    padding-left: 850px;
 }
 
 small {
@@ -168,6 +179,8 @@ span#obrigatorio {
     transition: .3s;
 }
 
+/* Botões */
+
 .cadastro-btn {
     padding: 12px 100px;
     border-radius: 10px;
@@ -192,6 +205,7 @@ span#obrigatorio {
     font-size: 12px;
     padding: 10px 0px 50px 0px;
     font-weight: 500;
+    margin-bottom: 0px !important;
 }
 
 .fazerlogin a {
@@ -218,56 +232,32 @@ h6 {
 }
 
 footer {
-    background-color: #343a40;
+    background: rgb(25, 25, 25);
+    background: linear-gradient(180deg, rgb(21, 21, 21) 0%, rgb(29, 29, 29) 100%);
+}
+
+#footer {
+    background-color: #1B1B1B;
+    letter-spacing: 1px;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+#contact {
+    letter-spacing: 0.2rem;
+}
+
+#footercontact {
+    letter-spacing: 2px;
+    font-size: 13.5px;
 }
 
 .zindex0 {
     z-index: 0;
-}
-
-.btn-1,
-.btn-2 {
-    line-height: 1.2;
-    font-family: "Satoshi", sans-serif;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 4px;
-    cursor: pointer;
-    border: none;
-    outline: none !important;
-    max-width: max-content;
-    transition: .3s;
-}
-
-.btn-1 {
-    background-image: var(--grad-1);
-    color: #191C1A !important;
-    text-decoration: none !important;
-}
-
-.btn-2 {
-    background-color: var(--cor-9);
-    color: #DCDCDC;
-}
-
-.btn-1:hover {
-    background: linear-gradient(180deg, #00ff8cda -3.11%, #38db8ad9 71.4%);
-}
-
-.btn-2:hover {
-    background-color: #202020;
-}
-
-.layer {
-    background-color: #ffffff;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 #main {
@@ -279,18 +269,12 @@ footer {
     animation-fill-mode: both;
 }
 
-header {
-    animation: 1s ease-out 0s 1 slideInFromLeft;
-    background: #1F1F1F;
-    padding: 30px;
+.border-top {
+    border-top: solid 1px rgb(47, 47, 47) !important;
 }
 
-@keyframes spin {
-    to {
-        transform: rotate(1turn);
-    }
-}
 
+/* Animation */
 
 @keyframes slideInFromLeft {
     0% {
@@ -330,6 +314,7 @@ header {
     }
 }
 
+/* Media Queries */
 
 @media (max-width: 768px) {
     .cadastro-titulo {
