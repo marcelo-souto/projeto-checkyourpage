@@ -17,15 +17,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../Pages/register.css">
+    <link rel="stylesheet" href="../Login/Login.css">
 
 
-    <title>Register||Check Your Page</title>
+    <title>Login||Check Your Page</title>
 </head>
 
 <body>
 
-    <!-- HEADER -->
     <header id="home" class="imgg">
         <nav class="navbar navbar-expand-md navbar-dark d-flex justify-content-between" id="navbar">
             <div class="container" id="navbar2">
@@ -54,7 +53,7 @@
                             <a href="./login.html" id="navlogin" class="nav-link">Login</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./cadastro.html" id="navcadastro" class="nav-link">Cadastre-se</a>
+                            <a href="../Pages/register.html" id="navcadastro" class="nav-link">Cadastre-se</a>
                         </li>
                         <li class="nav-item">
                             <a href="https://www.github.com/marcelo-souto/projeto-checkyourpage" id=""
@@ -75,123 +74,22 @@
 
     <!-- HEADER -->
 
-    <main class="cadastro-main" id="main">
-        <div class="container cadastromain">
-            <div class="cadastro-info pt-lg-5">
-                <h1 class="text-center cadastro-titulo" id="bold">Faça o seu cadastro.</h1>
-                <p class="text-center cadastro-p" id="bold">Preencha os campos abaixo com os seus dados.
-                </p>
-                <p id="Obrigatorio">Espaços de formulários com '
-                    <span id="obrigatorio">*</span> ' são obrigatórios
-                </p>
-            </div>
-        </div>
+    <main class="main-login" id="main-login">
+        <h1>Faça o seu login</h1>
+        <p>Ainda não possui uma conta?</p>
+        <a href="../Pages/register.html">Registre-se.</a>
     </main>
 
-    <section class="container" id="main">
-        <form class="needs-validation" action="#" novalidate>
-            <div class="form-layout">
-                <div class="dados">
-
-                    <small>Informações Básicas</small>
-
-                    <label class="form-detalhe" for="nome">Nome Completo
-                        <span id="obrigatorio">*</span>
-                    </label>
-                    <input type="text" name="nome" id="nome" class="form-control inputs" onblur="validarNome()"
-                        required>
-
-
-                    <label for="email">E-mail
-                        <span id="obrigatorio">*</span>
-                    </label>
-                    <input type="email" name="email" id="email" placeholder="contato@email.com"
-                        class="form-control inputs" onkeyup="validarEmail()" required>
-
-                    <label for="senha">Senha
-                        <span>(mínimo de 6 dígitos)
-                            <span id="obrigatorio">*</span>
-                        </span>
-                    </label>
-                    <input type="password" name="senha" id="senha" minlength="6" class="form-control inputs"
-                        onkeyup="confirmarPassword(); validarSenha()" required>
-
-                    <label for="confirm">Confirmar Senha</label>
-                    <input type="password" name="cofirm" id="confirm" class="form-control inputs"
-                        onkeyup="  confirmarPassword()" required>
-
-                    <label for="rg">RG
-                        <span id="obrigatorio">*</span>
-                    </label>
-                    <input type="text" name="rg" id="rg" placeholder="Informe seu RG" class="form-control inputs"
-                        onkeyup="validarRG()" required>
-                </div>
-
-                <div class="endereco">
-                    <small>Endereço Completo</small>
-                    <label class="form-detalhe" for="cep">CEP
-                        <span id="obrigatorio">*</span>
-                    </label>
-                    <input type="text" name="cep" id="cep" placeholder="00000-000"
-                        class="form-control enderecoinput inputs" maxlength="9" onblur="getApi(this.value)" required>
-
-                    <div class="grid-form">
-                        <div>
-                            <label for="cidade">Cidade</label>
-                            <input type="text" name="cidade" id="cidade" class="form-control enderecoinput inputs"
-                                readonly required>
-                        </div>
-
-                        <div>
-                            <label for="estado">UF</label>
-                            <input type="text" name="estado" id="estado" class="form-control enderecoinput inputs"
-                                readonly required>
-                        </div>
-                    </div>
-
-                    <label for="bairro">Bairro</label>
-                    <input type="text" name="bairro" id="bairro" class="form-control enderecoinput inputs" readonly
-                        required>
-
-                    <div class="grid-form">
-                        <div>
-                            <label for="rua">Rua</label>
-                            <input type="text" name="rua" id="rua" class="form-control enderecoinput inputs" readonly
-                                required>
-                        </div>
-
-                        <div>
-                            <label for="numero">Número<span id="obrigatorio"> *</span></label>
-                            <input type="text" name="numero" id="numero" class="form-control inputs"
-                                onblur="validarNumero(this.value)" required>
-                        </div>
-                    </div>
-                    <label for="complemento">Complemento
-                        <span>(opcional)</span>
-                    </label>
-                    <input type="text" name="complemento" id="complemento" class="form-control">
-                </div>
-            </div>
-
-            <!-- Texto do Cadastro Efetuado -->
-
-            <h6 class="text-center text-light"></h6>
-
-            <button data-tilt id="bttn" class="cadastro-btn">
-                Cadastre-se
-                <div class="arrow-wrapper">
-                    <div class="arrow"></div>
-
-                </div>
-            </button>
-
-        </form>
-        <p class="fazerlogin text-center" id="account">Já possui uma conta?
-            <a id="fazerlogin" href="./login.html" id="account">Faça o login.
-            </a>
-        </p>
-    </section>
-
+    <form id="form-login" class="text-light">
+        <label for="email">E-mail</label>
+        <input class="input-login form-control text-light" type="email" name="" id="email" required>
+        <span id="erro-email">Insira um e-mail válido.</span>
+        <label for="senha">Senha</label>
+        <input class="input-login form-control" type="password" name="" id="senha" required>
+        <span id="erro-senha">Sua senha deve ter no mínimo 6 dígitos.</span>
+        <a href="./recuperar.html">Esqueci a minha senha</a>
+        <button id="btn-login" type="submit">Login</button>
+    </form>
 
     <!-- Footer -->
 
@@ -206,7 +104,8 @@
 
                     <ul class="list-unstyled mb-5">
                         <li>
-                            <a class="text-light" href="tel:+552145093000" id="footercontact">(21) 4509-3000</a>
+                            <a class="text-light" href="tel:+552145093000" id="footercontact">(21)
+                                4509-3000</a>
                         </li>
                         <li>
                             <a class="text-light" href="mailto:email@frontenders.com"
@@ -293,7 +192,7 @@
 
     <script src="../node_modules/vanilla-tilt/lib/vanilla-tilt.js"></script>
 
-    <script src="./register.js"></script>
+    <script src="../Login/Login.js"></script>
 </body>
 
 </html>
