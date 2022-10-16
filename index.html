@@ -89,8 +89,8 @@
               <img width="22" src="./img/user.svg" alt="icone usuario">
 
               <div class="user-options">
-                <a href="./login.html" class="btn-1">login</a>
-                <a href="" class="btn-2">cadastre-se</a>
+                <a href="./login.html" class="btn-1 btn-100">login</a>
+                <a href="" class="btn-2 btn-100">cadastre-se</a>
               </div>
 
             </li>
@@ -111,8 +111,8 @@
           </p>
         </div>
         <div class="row justify-content-center">
-          <button class="max-content btn-1 mr-2">comece agora</button>
-          <button class="max-content btn-2 ml-2">saiba mais</button>
+          <button class="btn-1 mr-2">comece agora</button>
+          <button class="btn-2 ml-2">saiba mais</button>
         </div>
       </div>
     </main>
@@ -246,13 +246,15 @@
         </div>
         <div class="row">
           <div class="col-6 col-md-5">
-            <input class="input w-100 h-100 p-2 cor-4" type="text" id="nome" />
+            <input class="input w-100 p-2 cor-4" data-rules="min=2" type="text" id="nome" />
+            <small class="invalid-feedback"></small>
           </div>
           <div class="col-6 col-md-5">
-            <input class="input w-100 h-100 p-2 cor-4" type="email" id="email" />
+            <input class="input w-100 p-2 cor-4" data-rules="min=2 email" type="email" id="email" />
+            <small class="invalid-feedback"></small>
           </div>
           <div class="col-12 col-sm-2 mt-4 mt-md-0">
-            <a class="btn-1 btn-continuar" href="">continuar</a>
+            <button class="btn-1" type="submit">continuar</button>
           </div>
         </div>
       </div>
@@ -346,7 +348,7 @@
       </div>
     </footer>
 
-    <button class="max-content btn-voltar-cima btn-1 p-2 rounded-circle">
+    <button class="btn-voltar-cima btn-1 p-2 rounded-circle">
       <img src="./img/seta-para-cima.svg" alt="seta para cima" />
     </button>
 
@@ -368,6 +370,7 @@
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/input.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

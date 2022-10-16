@@ -19,6 +19,12 @@ body {
   background-position: top center;
 }
 
+@media (max-width: 768px) {
+  #homepage .main-home {
+    padding: 80px 60px;
+  }
+}
+
 #homepage .sec-2 > div {
   max-width: 1160px;
 }

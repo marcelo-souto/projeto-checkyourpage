@@ -31,13 +31,12 @@ a {
   border: none;
   outline: none !important;
   text-decoration: none !important;
-  width: 100%;
+  width: max-content;
   transition: .3s;
 }
 
-/* max-content de alguns botoes */
-.max-content {
-  max-width: max-content;
+.btn-100 {
+  width: 100% !important;
 }
 
 .btn-1 {

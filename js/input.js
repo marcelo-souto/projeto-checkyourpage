@@ -71,17 +71,25 @@ const clearErrors = (input, indice) => {
 };
 
 const fillInputs = () => {
-  if (localStorage.email) email.value = localStorage.email;
-  if (localStorage.senha) senha.value = localStorage.senha;
+  const inputs = document.querySelectorAll("input");
+
+  for (let i = 0; i < inputs.length; i++) {
+    let input = inputs[i]
+    let id = input.getAttribute("id");
+
+    for (let i = 0; i < localStorage.length; i++) {
+      if (localStorage.key(i) == id) {
+        input.value = localStorage.getItem(id)
+      }
+    }
+  }
 };
 
 const btnEnviar = document.querySelector('[type="submit"]');
 const inputs = document.querySelectorAll("input");
-const email = document.querySelector("#email");
-const senha = document.querySelector("#senha");
 let apertou = false;
 
-window.addEventListener('load', fillInputs)
+window.addEventListener("load", fillInputs);
 
 inputs.forEach((input, indice) =>
   input.addEventListener("input", () => {
@@ -104,6 +112,9 @@ btnEnviar.addEventListener("click", (e) => {
 
   if (status) {
     window.location = "./index.html";
+
+    const email = document.querySelector("#email");
+    const senha = document.querySelector("#senha");
 
     if (document.querySelector("#lembredemim").checked) {
       localStorage.setItem("email", email.value);
