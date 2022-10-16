@@ -3,15 +3,14 @@ const brand = document.querySelector("#homepage .navbar-brand"); // Logo no head
 
 const target = document.querySelectorAll("[data-anime]"); // Elementos com data-anime
 
-const userOptions = document.querySelector('.user-options'); // Menu do usuario
-const iconeUser = document.querySelector('.user-icon'); // Icone do menu de usuario
+const userOptions = document.querySelector(".user-options"); // Menu do usuario
+const iconeUser = document.querySelector(".user-icon"); // Icone do menu de usuario
 
 const iconeSenha = document.querySelector(".icone-senha"); // Icone de senha no input
 const inputSenha = document.querySelector("#senha"); // input de senha
 
 const btnContinuar = document.querySelector(".btn-continuar"); // Botao continuar homepage
 // const parametros = new URLSearchParams(location.search);
-
 
 /* ==================================== Funções ================================= */
 
@@ -56,15 +55,15 @@ const mostrarDiv = (div, display) => {
   setTimeout(() => {
     div.style.opacity = 1;
   }, 200);
-}
+};
 
 // Função para esconder um elemento
 const esconderDiv = (div) => {
   div.style.opacity = 0;
   setTimeout(() => {
-    div.style.display = 'none';
+    div.style.display = "none";
   }, 200);
-}
+};
 
 // funcao para diminuir a chamada da funcao
 const debounce = (func, wait, immediate) => {
@@ -96,12 +95,12 @@ if (btnContinuar) {
     e.preventDefault(); // PreventDefault pra evitar que rode
     let nome = document.querySelector("#nome").value;
     let email = document.querySelector("#email").value;
-    e.target.href = `./teste.html?nome=${nome}&email=${email}`;
+    window.location = `./teste.html?nome=${nome}&email=${email}`;
   });
 }
 
 if (iconeSenha) {
-  iconeSenha.addEventListener("click", (e) => {
+  iconeSenha.addEventListener("click", () => {
     if (inputSenha.getAttribute("type") === "password") {
       inputSenha.setAttribute("type", "text");
       iconeSenha.querySelector("rect").classList.add("d-none");
@@ -111,7 +110,6 @@ if (iconeSenha) {
     }
   });
 }
-
 
 animate();
 
@@ -123,16 +121,21 @@ window.addEventListener(
   }, 200)
 );
 
+if (iconeUser && userOptions && window.innerWidth > 768) {
+  iconeUser.addEventListener("mouseenter", () => {
+    mostrarDiv(userOptions, "flex");
+  });
 
-iconeUser.addEventListener('mouseenter', () => {
-  mostrarDiv(userOptions, 'flex')
-})
+  userOptions.addEventListener(
+    "mousemove",
+    debounce(() => {
+      mostrarDiv(userOptions, "flex");
+    }, 200)
+  );
 
-userOptions.addEventListener('mousemove', debounce(() => {
-  mostrarDiv(userOptions, 'flex')}, 200))
-
-userOptions.addEventListener('mouseleave', () => {
-  setTimeout(() => {
-    esconderDiv(userOptions)
-  }, 1500)
-})
+  userOptions.addEventListener("mouseleave", () => {
+    setTimeout(() => {
+      esconderDiv(userOptions);
+    }, 1500);
+  });
+}

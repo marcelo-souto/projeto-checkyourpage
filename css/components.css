@@ -85,6 +85,7 @@ a {
   padding: 16px 24px;
   border-radius: 4px;
   transition: .3s;
+  filter: drop-shadow(0px 0px 4px  rgba(0, 0, 0, 0.25));
 }
 
 .user-options a {
@@ -110,6 +111,24 @@ a {
   right: 0;
 }
 
+@media (max-width: 768px) {
+  .user-icon img {
+    display: none;
+    ;
+  }
+  .user-options {
+    display: flex;
+    width: 100%;
+    opacity: 1;
+    position: initial;
+    flex-direction: row;
+    margin-bottom: 12px;
+  }
+  .user-options::before {
+    display: none;
+  }
+}
+
 /* ----------- Inputs ------------- */
 .input {
   background-color: #232323;
@@ -121,6 +140,14 @@ a {
 
 .input:focus {
   border-color: #444444;
+}
+
+.invalido {
+  border-color: red !important;
+}
+
+.valido {
+  border-color: var(--cor-p1) !important;
 }
 
 /* ----------- Loader ------------- */

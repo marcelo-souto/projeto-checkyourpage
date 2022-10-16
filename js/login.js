@@ -1,97 +1,11 @@
-// const validador = {
-//     handleSubmit: (event) => {
-//         event.preventDefault();
-//         let send = true;
-
-//         let inputs = formulario.querySelectorAll('input');
-
-//         validador.clearErrors()
-
-//         for (let i = 0; i < inputs.length; i++) {
-//             let input = inputs[i];
-//             let check = validador.checkInput(input)
-//             if (check !== true) {
-//                 send = false;
-//                 validador.showError(input, check)
-//             }
-//         }
-
-//         if (send) {
-//             formulario.submit();
-//         }
-//     },
-
-//     checkInput: (input) => {
-//         let rules = input.getAttribute('data-rules');
-
-//         if (rules !== null) {
-//             rules = rules.split(" ");
-
-//             for (let rule in rules) {
-//                 let ruleDetails = rules[rule].split('=');
-
-//                 switch (ruleDetails[0]) {
-//                     case 'required':
-//                         if (input.value == '') {
-//                             return `Campo Vazio`;
-//                         }
-//                     break;
-//                     case 'min':
-//                         if (input.value.length < ruleDetails[1]) {
-//                             return `Obrigatorio pelo menos ${ruleDetails[1]} caracteres.`
-//                         }
-//                     break;
-//                     case 'email':
-//                         if (input.value !== '') {
-//                             if (! /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g.test(input.value.toLowerCase())) {
-//                                 return `Insira um email válido.`
-//                             }
-//                         }
-//                     break;
-//                 }
-//             }
-//         }
-
-//         return true
-//     },
-
-//     showError: (input, erro) => {
-//         input.classList.add('is-invalid')
-
-//         let errorElement = document.createElement('div');
-//         errorElement.classList.add('erro');
-//         errorElement.innerHTML = erro;
-
-//         input.parentElement.insertBefore(errorElement, input.elementSibling)
-//     },
-
-//     clearErrors: () => {
-//         let inputs = formulario.querySelectorAll('input')
-
-//         for (let i = 0; i < inputs.length; i++) {
-//             inputs[i].classList.remove('is-invalid')
-//         }
-
-//         let errorElements = document.querySelectorAll('.erro')
-
-//         for (let i = 0; i < errorElements.length; i++) {
-//             errorElements[i].remove()
-//         }
-//     }
-// }
-
-// const formulario = document.querySelector(".formulario")
-// formulario.addEventListener('submit', validador.handleSubmit)
-
-
-
-
-const rodar = (input) => {
-  clearErrors(input);
+const run = (input, indice) => {
+  clearErrors(input, indice);
 
   let check = checkInput(input);
   if (check !== true) {
-    showError(input, check);
+    showError(input, check, indice);
+  } else {
+    return check;
   }
 };
 
@@ -133,29 +47,67 @@ const checkInput = (input) => {
   return true;
 };
 
-const showError = (input, erro) => {
-  input.classList.add("is-invalid");
+const showError = (input, erro, indice) => {
+  input.classList.remove("valido");
+  input.classList.add("invalido");
 
-  let errorElement = document.createElement("div");
-  errorElement.classList.add("erro");
-  errorElement.innerHTML = erro;
+  let elementError = document.querySelectorAll(".invalid-feedback")[indice];
 
-  input.parentElement.insertBefore(errorElement, input.elementSibling);
+  elementError.classList.add("d-block");
+
+  elementError.innerHTML = erro;
 };
 
-const clearErrors = (input) => {
-  input.classList.remove("is-invalid");
+const clearErrors = (input, indice) => {
+  input.classList.remove("invalido");
 
-  let errorElements = document.querySelectorAll(".erro");
+  let elementError = document.querySelectorAll(".invalid-feedback")[indice];
 
-  for (let i = 0; i < errorElements.length; i++) {
-    errorElements[i].remove();
+  if (elementError) {
+    elementError.innerHTML = "";
   }
-  
+
+  input.classList.add("valido");
 };
 
-const Inputs = document.querySelectorAll("input");
+const fillInputs = () => {
+  if (localStorage.email) email.value = localStorage.email;
+  if (localStorage.senha) senha.value = localStorage.senha;
+};
 
-Inputs.forEach(input => input.addEventListener('input', () => {
-    rodar(input)
-}))
+const btnEnviar = document.querySelector('[type="submit"]');
+const inputs = document.querySelectorAll("input");
+const email = document.querySelector("#email");
+const senha = document.querySelector("#senha");
+let apertou = false;
+
+window.addEventListener('load', fillInputs)
+
+inputs.forEach((input, indice) =>
+  input.addEventListener("input", () => {
+    if (apertou) {
+      run(input, indice);
+    }
+  })
+);
+
+btnEnviar.addEventListener("click", (e) => {
+  e.preventDefault();
+  apertou = true;
+  let status = true;
+
+  for (let i = 0; i < inputs.length; i++) {
+    if (!run(inputs[i], i)) {
+      status = false;
+    }
+  }
+
+  if (status) {
+    window.location = "./index.html";
+
+    if (document.querySelector("#lembredemim").checked) {
+      localStorage.setItem("email", email.value);
+      localStorage.setItem("senha", senha.value);
+    }
+  }
+});
