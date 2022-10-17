@@ -171,7 +171,6 @@ a {
   border-right-color: var(--cor-p1);
   border-bottom-color: var(--cor-p1);
   border-radius: 50%;
-  opacity: 1;
   transition: .3s;
 }
 

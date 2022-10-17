@@ -40,7 +40,7 @@ body {
 #loginpage .main-login {
   border-radius: 12px;
   background: url("../img/symbols-bg.svg"), var(--grad-2);
-  background-position: left center;
+  background-position: left bottom;
   background-size: contain;
   background-repeat: no-repeat;
   margin: 100px auto;
