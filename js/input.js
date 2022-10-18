@@ -1,4 +1,4 @@
-const run = (input, indice) => {
+export const run = (input, indice) => {
   clearErrors(input, indice);
 
   let check = checkInput(input);
@@ -9,7 +9,7 @@ const run = (input, indice) => {
   }
 };
 
-const checkInput = (input) => {
+export const checkInput = (input) => {
   let rules = input.getAttribute("data-rules");
 
   if (rules !== null) {
@@ -40,6 +40,11 @@ const checkInput = (input) => {
             }
           }
           break;
+        case "html":
+          if (!/<[^\/].*?>/gi.test(input.value)) {
+            return `Insira um código html válido`;
+          }
+          break;
       }
     }
   }
@@ -47,7 +52,7 @@ const checkInput = (input) => {
   return true;
 };
 
-const showError = (input, erro, indice) => {
+export const showError = (input, erro, indice) => {
   input.classList.add("invalido");
 
   let elementError = document.querySelectorAll(".invalid-feedback")[indice];
@@ -57,7 +62,7 @@ const showError = (input, erro, indice) => {
   elementError.innerHTML = erro;
 };
 
-const clearErrors = (input, indice) => {
+export const clearErrors = (input, indice) => {
   input.classList.remove("invalido");
   let elementError = document.querySelectorAll(".invalid-feedback")[indice];
 
@@ -93,37 +98,37 @@ const checkLogin = (email, senha) => {
     if (status) break;
   }
 
-  showResult(status)
+  showResult(status);
 };
 
 const showResult = (status) => {
   if (status) {
-    window.location = "./index.html"
+    window.location = "./index.html";
   } else {
-    document.querySelectorAll(".invalid-feedback").forEach(msg => {
-      msg.previousElementSibling.classList.add('invalido')
-      msg.classList.add('d-block')
-      msg.innerHTML = 'Usuário ou senha incorretos'
-    }) 
+    document.querySelectorAll(".invalid-feedback").forEach((msg) => {
+      msg.previousElementSibling.classList.add("invalido");
+      msg.classList.add("d-block");
+      msg.innerHTML = "Usuário ou senha incorretos";
+    });
   }
-}
+};
 
 // =======================================================================
 
 let cadastros = [
   {
-    email: 'marcelosouto676@gmail.com',
-    senha: '12345678'
+    email: "marcelosouto676@gmail.com",
+    senha: "12345678",
   },
   {
-    email: 'teste@hotmail.com',
-    senha: 'abcd1234'
+    email: "teste@hotmail.com",
+    senha: "abcd1234",
   },
   {
-    email: 'email@email.com',
-    senha: 'usuario123'
-  }
-]
+    email: "email@email.com",
+    senha: "usuario123",
+  },
+];
 
 // let cadastrosJs = []
 // localStorage.setItem('cadastrosJs', JSON.stringify(cadastrosJs))
@@ -131,17 +136,20 @@ let cadastros = [
 
 const btnEnviar = document.querySelector('[type="submit"]');
 const inputs = document.querySelectorAll("input");
+
 let apertou = false;
 
 window.addEventListener("load", fillInputs);
 
-inputs.forEach((input, indice) =>
-  input.addEventListener("input", () => {
-    if (apertou) {
-      run(input, indice);
-    }
-  })
-);
+if (inputs) {
+  inputs.forEach((input, indice) =>
+    input.addEventListener("input", () => {
+      if (apertou) {
+        run(input, indice);
+      }
+    })
+  );
+}
 
 btnEnviar.addEventListener("click", (e) => {
   e.preventDefault();
@@ -155,15 +163,16 @@ btnEnviar.addEventListener("click", (e) => {
   }
 
   if (status) {
-    const email = document.querySelector("#email").value;
-    const senha = document.querySelector("#senha").value;
+    const email = document.querySelector("#email");
+    const senha = document.querySelector("#senha");
 
-    if (document.querySelector("#lembredemim").checked) {
-      localStorage.setItem("email", email);
-      localStorage.setItem("senha", senha);
+    if (email && senha) {
+      if (document.querySelector("#lembredemim").checked) {
+        localStorage.setItem("email", email.value);
+        localStorage.setItem("senha", senha.value);
+      }
     }
 
-    checkLogin(email, senha)
-      
+    checkLogin(email, senha);
   }
 });
