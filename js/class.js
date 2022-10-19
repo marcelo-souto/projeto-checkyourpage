@@ -1,15 +1,17 @@
 // Objeto Code
 
 export class Code {
-  constructor(html) {
+  constructor(html, css) {
     this.html = html;
+    this.css = css;
     this.semanticTags = this.getSemanticTags();
     this.acessibilityAttributes = this.getAcessibilityAttributes();
     this.metaTags = this.getMetaTags();
+    this.mediaQueries = this.getMediaQueries();
   }
   // Remove espaços e quebras de linha
-  _removeSpaces() {
-    let data = this.html;
+  _removeSpaces(code) {
+    let data = code;
     data = data.replace(/\r\n|\n|\r/gm, "");
     data = data.replace(/(\s){2,}/g, " ");
     return data;
@@ -17,9 +19,21 @@ export class Code {
 
   // Pega as tags contidas no html
   getTags() {
-    let data = this._removeSpaces();
+    let data = this._removeSpaces(this.html);
     const regex = /<[^\/].*?>/gi;
     return (data = data.match(regex));
+  }
+
+  getMediaQueries() {
+    let data = this._removeSpaces(this.css);
+    const regex = /@.*?\{+?.*?\}+?/gi;
+    data = data.match(regex);
+
+    if (!data.length) {
+      return false;
+    } else {
+      return data;
+    }
   }
 
   // Pegar tags semanticas
@@ -30,7 +44,7 @@ export class Code {
     if (tags) {
       const filteredArr = tags.filter((tag) => {
         return semanticTags.test(tag);
-      })
+      });
 
       if (!filteredArr.length) {
         return false;
@@ -79,6 +93,7 @@ export class Code {
       this.semanticTags,
       this.acessibilityAttributes,
       this.metaTags,
+      this.mediaQueries,
     ];
 
     let objs = [];
@@ -118,6 +133,17 @@ export class Code {
             score += 2.5;
           }
           requisite = "Meta Tags";
+          break;
+
+        case 3:
+          if (length < 1) {
+            score += 0;
+          } else if (length <= 2) {
+            score += 1;
+          } else if (length > 2) {
+            score += 2.5;
+          }
+          requisite = "Media Queries";
           break;
       }
 

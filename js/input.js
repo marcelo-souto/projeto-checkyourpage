@@ -42,7 +42,12 @@ export const checkInput = (input) => {
           break;
         case "html":
           if (!/<[^\/].*?>/gi.test(input.value)) {
-            return `Insira um código html válido`;
+            return `Insira um código html válido.`;
+          }
+          break;
+        case "css":
+          if (!/.*?\{+?\n*?.*?\n*?\}+?/gi.test(input.value)) {
+            return `Insira um código css válido.`;
           }
           break;
       }
