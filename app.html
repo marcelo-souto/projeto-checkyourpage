@@ -52,9 +52,9 @@
       class="border-bottom fonte-corpo bg-grad-2 position-fixed w-100"
     >
       <nav class="container navbar navbar-expand-md">
-        <a class="navbar-brand" href="./index.html"
-          ><img width="160" src="./img/logo.svg" alt="check your page logo"
-        /></a>
+        <a class="navbar-brand" href="./index.html">
+          <img width="160" src="./img/logo.svg" alt="check your page logo" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -91,19 +91,19 @@
             class="list-unstyled d-none d-sm-flex align-items-center mb-0 ml-4"
           >
             <li>
-              <a class="mr-2" href="#"
-                ><img src="./img/icones-redes/Github.svg" alt="Github"
-              /></a>
+              <a class="mr-2" href="#">
+                <img src="./img/icones-redes/Github.svg" alt="Github" />
+              </a>
             </li>
             <li>
-              <a class="mr-2" href="#"
-                ><img src="./img/icones-redes/Twitter.svg" alt="Twitter"
-              /></a>
+              <a class="mr-2" href="#">
+                <img src="./img/icones-redes/Twitter.svg" alt="Twitter" />
+              </a>
             </li>
             <li>
-              <a href="#"
-                ><img src="./img/icones-redes/Discord.svg" alt="Discord"
-              /></a>
+              <a href="#">
+                <img src="./img/icones-redes/Discord.svg" alt="Discord" />
+              </a>
             </li>
           </ul>
         </div>
@@ -131,7 +131,6 @@
 
       <div class="bg-grad-2">
         <div class="container">
-
           <div class="row pt-5 mb-3">
             <div class="col-6 position-relative">
               <label class="fonte-corpo cor-4" for="html"
@@ -142,6 +141,7 @@
                 id="html"
                 cols="30"
                 rows="16"
+                spellcheck="false"
                 data-rules="required html"
               >
               </textarea>
@@ -157,6 +157,7 @@
                 id="css"
                 cols="30"
                 rows="16"
+                spellcheck="false"
                 data-rules="required css"
               >
               </textarea>
@@ -172,6 +173,64 @@
         </div>
       </div>
     </main>
+
+    <div class="modelo d-none">
+      <div class="tag-info mb-3">
+        <div class="requisito">
+          <h3
+            class="requisito-titulo fonte-satoshi font-weigth-medium h5 cor-4 mb-0"
+          ></h3>
+          <div
+            class="requisito-nota fonte-satoshi font-weight-bold h6 cor-p1 mb-0"
+          ></div>
+        </div>
+
+        <div class="tags fonte-corpo cor-5"></div>
+      </div>
+    </div>
+
+    <section class="resultado container padding-x-80">
+      <div class="row">
+        <h1
+          class="col-12 fonte-satoshi font-weight-bold display-4 mb-5 titulo-xl text-center"
+        >
+          Resultado
+        </h1>
+      </div>
+
+      <div class="resultado-demo">
+        <div class="info"></div>
+        <div>
+          <div class="nota-detalhes">
+
+            <div class="nota-container">
+
+              <div class="nota fonte-satoshi font-weight-bold h1"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="240px"
+                height="240px"
+                class="mb-4"
+              >
+                <defs></defs>
+                <circle cx="120" cy="120" r="100" stroke-linecap="round" />
+              </svg>
+
+            </div>
+            
+            <div>
+
+              <h4 class="fonte-satoshi font-weight-bold">Detalhes</h4>
+              <ul class="nota-info fonte-corpo cor-7 list-unstyled">
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer" class="bg-grad-2 padding-x-80 pb-0">

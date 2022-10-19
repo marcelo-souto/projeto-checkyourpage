@@ -1,4 +1,4 @@
-// Objeto Code
+// Objeto Code8,m
 
 export class Code {
   constructor(html, css) {
@@ -29,7 +29,7 @@ export class Code {
     const regex = /@.*?\{+?.*?\}+?/gi;
     data = data.match(regex);
 
-    if (!data.length) {
+    if (!data) {
       return false;
     } else {
       return data;
@@ -88,7 +88,7 @@ export class Code {
     }
   }
 
-  classifyTags() {
+  classifyCode() {
     let result = [
       this.semanticTags,
       this.acessibilityAttributes,

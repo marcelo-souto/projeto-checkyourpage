@@ -92,8 +92,86 @@ a {
 }
 
 /* ----------- Pagina do app ----------- */
+
 textarea.input {
   resize: none;
+}
+
+.resultado-demo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+.tag-info {
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.tag-info .tags {
+  height: 0px;
+  padding: 0px 12px;
+  transition: all .3s ease-in-out;
+}
+
+.tags.active {
+  padding: 12px 12px;
+}
+
+.tag-info .requisito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.nota-detalhes {
+  width: max-content;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 32px;
+  margin: 0 auto;
+  max-width: 360px;
+}
+
+.nota-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nota {
+  position: absolute;
+}
+
+circle {
+  fill: none;
+  stroke: var(--cor-p1);
+  stroke-width: 32px;
+  stroke-dasharray: 620;
+  stroke-dashoffset: 620;
+  transition: 2s;
+}
+
+
+@keyframes fillcircle {
+  100% {
+    stroke-dashoffset: 176;
+  }
+}
+
+.input-result {
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--cor-p1);
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
 }
 
 /* --------- Classes Utilitarias ----------- */
