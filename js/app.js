@@ -9,6 +9,7 @@ let apertou = false;
 const showOnScreen = (obj) => {
   let info = document.querySelector(".info");
   let nota = 0;
+  let notaInfo = document.querySelector(".nota-info");
 
   obj.forEach((item) => {
     let tagInfo = document.querySelector(".modelo .tag-info").cloneNode(true);
@@ -17,6 +18,18 @@ const showOnScreen = (obj) => {
 
     tagInfo.querySelector(".requisito-titulo").innerHTML = item.requisito;
     tagInfo.querySelector(".requisito-nota").innerHTML = item.nota.toFixed(1);
+
+    if (item.tags.length > 0) {
+      let eachNotaInfo = document.createElement("li");
+      eachNotaInfo.innerHTML = `Encontramos ${item.tags.length} ${item.requisito} no seu código;`;
+
+      notaInfo.append(eachNotaInfo);
+    } else {
+      let eachNotaInfo = document.createElement("li");
+      eachNotaInfo.innerHTML = `Não Encontramos ${item.requisito} no seu código;`;
+
+      notaInfo.append(eachNotaInfo)
+    }
 
     let tagsArea = tagInfo.querySelector(".tags");
     if (item.tags) {
@@ -29,20 +42,15 @@ const showOnScreen = (obj) => {
         tagsArea.append(inputResult);
       });
     } else {
-      tagsArea.innerHTML = `Não encontramos ${item.requisito} no seu código;`;
+      tagsArea.innerHTML = `Não encontramos ${item.requisito} no seu código`;
     }
-
-    let notaInfo = document.querySelector(".nota-info")
-    let eachNotaInfo = document.createElement("li");
-    eachNotaInfo.innerHTML = `Encontramos ${item.tags.length} ${item.requisito} no seu código`;
-
-    notaInfo.append(eachNotaInfo);
 
     info.append(tagInfo);
   });
 
   document.querySelector(".nota").innerHTML = nota;
-  document.querySelector("circle").style.strokeDashoffset = 620 - 620 * (nota / 10);
+  document.querySelector("circle").style.strokeDashoffset =
+    640 - 640 * (nota / 10);
 
   console.log(obj);
 };
@@ -67,7 +75,6 @@ const addEventToTagInfo = () => {
 };
 
 // ==================================================================
-
 
 if (inputs) {
   window.addEventListener("load", () => {

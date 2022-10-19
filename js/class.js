@@ -129,8 +129,10 @@ export class Code {
         case 2:
           if (length < 1) {
             score += 0;
-          } else if (length >= 1) {
-            score += 2.5;
+          } else if (length == 1) {
+            score += 1;
+          } else if (length > 1) {
+            score += 2.5
           }
           requisite = "Meta Tags";
           break;

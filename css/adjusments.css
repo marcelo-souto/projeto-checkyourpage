@@ -152,16 +152,9 @@ circle {
   fill: none;
   stroke: var(--cor-p1);
   stroke-width: 32px;
-  stroke-dasharray: 620;
-  stroke-dashoffset: 620;
+  stroke-dasharray: 640;
+  stroke-dashoffset: 640;
   transition: 2s;
-}
-
-
-@keyframes fillcircle {
-  100% {
-    stroke-dashoffset: 176;
-  }
 }
 
 .input-result {
