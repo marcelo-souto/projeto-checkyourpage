@@ -7,9 +7,19 @@ let apertou = false;
 
 // =================================================================
 const showOnScreen = (obj) => {
+  let resultado = document.querySelector('.resultado')
   let info = document.querySelector(".info");
   let nota = 0;
   let notaInfo = document.querySelector(".nota-info");
+
+  if (resultado.offsetHeight < 100) {
+  resultado.classList.add('padding-x-80')
+  resultado.style.height = resultado.scrollHeight + 400 + 'px'
+  setTimeout(() => {resultado.style.height = 100 + '%'}, 1000)
+  }
+
+  notaInfo.innerHTML = ''
+  info.innerHTML = ''
 
   obj.forEach((item) => {
     let tagInfo = document.querySelector(".modelo .tag-info").cloneNode(true);
@@ -51,8 +61,6 @@ const showOnScreen = (obj) => {
   document.querySelector(".nota").innerHTML = nota;
   document.querySelector("circle").style.strokeDashoffset =
     640 - 640 * (nota / 10);
-
-  console.log(obj);
 };
 
 // ===============================================================

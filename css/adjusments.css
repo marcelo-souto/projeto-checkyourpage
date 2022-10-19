@@ -97,6 +97,12 @@ textarea.input {
   resize: none;
 }
 
+.resultado {
+  height: 0px;
+  transition: .5s;
+  overflow: hidden;
+}
+
 .resultado-demo {
   display: grid;
   grid-template-columns: 2fr 1fr;
