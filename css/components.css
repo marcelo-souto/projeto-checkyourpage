@@ -1,0 +1,182 @@
+/* ----------- Header ------------- */
+#header {
+  top: 0;
+  z-index: 1;
+  border-color: var(--cor-8) !important;
+}
+
+/* ----------- Links ------------- */
+a {
+  transition: .3s;
+}
+
+#footer a:hover, #header .nav-link:hover {
+  color: #f5f5f5;
+  filter: brightness(1.5) contrast(92%);
+}
+
+/* ----------- Footer ------------- */
+#footer h3 {
+  letter-spacing: 0.2rem;
+}
+
+/* ----------- Botões ------------- */
+.btn-1, .btn-2 {
+  line-height: 1.2;
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none !important;
+  text-decoration: none !important;
+  width: max-content;
+  transition: .3s;
+}
+
+.btn-100 {
+  width: 100% !important;
+}
+
+.btn-1 {
+  background-image: var(--grad-1);
+  color: #191C1A !important;
+  text-decoration: none !important;
+}
+
+.btn-2 {
+  background-color: var(--cor-9);
+  color: #DCDCDC;
+}
+
+.btn-1:hover {
+  background: linear-gradient(180deg, #00ff8cda -3.11%, #38db8ad9 71.4%);
+}
+
+.btn-2:hover {
+  background-color: #202020;
+}
+
+.btn-voltar-cima {
+  position: fixed;
+  bottom: -60px;
+  right: 16px;
+  transition: .5s;
+}
+
+/* Menu de usuario do header */
+.user-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.user-options {
+  position: absolute;
+  width: max-content;
+  top: 52px;
+  right: 10px;
+  opacity: 0;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #f5f5f5;
+  padding: 16px 24px;
+  border-radius: 4px;
+  transition: .3s;
+  filter: drop-shadow(0px 0px 4px  rgba(0, 0, 0, 0.25));
+}
+
+.user-options a {
+  text-align: center;
+  color: var(--cor-8);
+}
+
+.user-options a:last-child {
+  color: #000000;
+  background-color: transparent;
+  border: 1px solid #000000;
+}
+
+.user-options::before {
+  content: '';
+  width: 0; 
+  height: 0; 
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent; 
+  border-right:14px solid #f5f5f5;
+  position: absolute;
+  top: -12px;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .user-icon img {
+    display: none;
+    ;
+  }
+  .user-options {
+    display: flex;
+    width: 100%;
+    opacity: 1;
+    position: initial;
+    flex-direction: row;
+    margin-bottom: 12px;
+  }
+  .user-options::before {
+    display: none;
+  }
+}
+
+/* ----------- Inputs ------------- */
+.input {
+  background-color: #232323;
+  border: 1px solid #2c2c2c;
+  outline: none;
+  border-radius: 4px;
+  transition: .3s;
+}
+
+.input:focus {
+  border-color: #444444;
+}
+
+.invalido {
+  border-color: red !important;
+}
+
+.valido {
+  border-color: var(--cor-p1) !important;
+}
+
+/* ----------- Loader ------------- */
+.layer {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  animation: spin 1s infinite;
+  width: 100px;
+  height: 100px;
+  border: 12px solid #ffffff;
+  border-top-color: var(--cor-p1);
+  border-right-color: var(--cor-p1);
+  border-bottom-color: var(--cor-p1);
+  border-radius: 50%;
+  opacity: 1;
+  transition: .3s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
