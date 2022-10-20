@@ -1,5 +1,4 @@
-// Objeto Code8,m
-
+// Objeto Code
 export class Code {
   constructor(html, css) {
     this.html = html;
@@ -88,6 +87,7 @@ export class Code {
     }
   }
 
+  // Classifica o código e devolve uma array com objetos contendo nota, tags e o requisito
   classifyCode() {
     let result = [
       this.semanticTags,
@@ -104,45 +104,49 @@ export class Code {
 
       let length = result[indice].length;
       switch (indice) {
+        // Tags Semanticas
         case 0:
-          if (length < 1) {
+          if (length < 1) { // Se for 0
             score += 0;
-          } else if (length <= 2) {
+          } else if (length <= 2) { // Se for menor ou igual a 2
             score += 1;
-          } else if (length > 2) {
+          } else if (length > 2) { // Se for maior que 2
             score += 2.5;
           }
           requisite = "Tags Semanticas";
           break;
 
+        // Atributos de Acessibilidade
         case 1:
-          if (length < 1) {
+          if (length < 1) { // Se for 0
             score += 0;
-          } else if (length <= 2) {
+          } else if (length <= 2) { // Se for menor ou igual a 2
             score += 1;
-          } else if (length > 2) {
+          } else if (length > 2) { // Se for maior que 2
             score += 2.5;
           }
           requisite = "Atributos de Acessibilidade";
           break;
 
+        // Meta tags
         case 2:
-          if (length < 1) {
+          if (length < 1) { // Se for 0
             score += 0;
-          } else if (length == 1) {
+          } else if (length == 1) { // Se for igual 1
             score += 1;
-          } else if (length > 1) {
+          } else if (length > 1) { // Se for maior que 1
             score += 2.5
           }
           requisite = "Meta Tags";
           break;
 
+        // Media queries
         case 3:
-          if (length < 1) {
+          if (length < 1) { // Se for 0
             score += 0;
-          } else if (length <= 2) {
+          } else if (length <= 2) { // Se for menor ou igual a 2
             score += 1;
-          } else if (length > 2) {
+          } else if (length > 2) { // Se for maior que 2
             score += 2.5;
           }
           requisite = "Media Queries";

@@ -1,49 +1,56 @@
+// Importando class e functions para checar inputs
 import { Code } from "./modules/class.js";
 import { run, checkInput, showError, clearErrors } from "./modules/input.js";
 
 const inputs = document.querySelectorAll("textarea");
 const btnEnviar = document.querySelector('[type="submit"]');
-let apertou = false;
+let apertou = false; // não apertou
 
-// =================================================================
+// Mostra na tela o resultado das tags classificadas do objeto
 const showOnScreen = (obj) => {
-  // location.href = location.href = '#resultado'
-  let resultado = document.querySelector('.resultado')
+  let resultado = document.querySelector(".resultado");
   let info = document.querySelector(".info");
   let nota = 0;
   let notaInfo = document.querySelector(".nota-info");
 
+  // Fazendo a div surgir
   if (resultado.offsetHeight < 100) {
-  resultado.classList.add('padding-x-80')
-  resultado.style.height = resultado.scrollHeight + 400 + 'px'
-  setTimeout(() => {resultado.style.height = 100 + '%'}, 1000)
+    resultado.classList.add("padding-x-80");
+    resultado.style.height = resultado.scrollHeight + 400 + "px";
+    
+    setTimeout(() => {
+      resultado.style.height = 100 + "%";
+    }, 1000);
   }
 
-  notaInfo.innerHTML = ''
-  info.innerHTML = ''
+  // Resetando os elementos
+  notaInfo.innerHTML = "";
+  info.innerHTML = "";
 
   obj.forEach((item) => {
     let tagInfo = document.querySelector(".modelo .tag-info").cloneNode(true);
 
-    nota += item.nota;
+    nota += item.nota; // Incrementando a nota geral
 
+    // Inserindo o nome e nota de cada requisito
     tagInfo.querySelector(".requisito-titulo").innerHTML = item.requisito;
     tagInfo.querySelector(".requisito-nota").innerHTML = item.nota.toFixed(1);
 
-    if (item.tags.length > 0) {
+    if (item.tags.length > 0) { // Se tiver tags
       let eachNotaInfo = document.createElement("li");
       eachNotaInfo.innerHTML = `Há ${item.tags.length} ${item.requisito}`;
 
       notaInfo.append(eachNotaInfo);
-    } else {
+    } else { // Se nao tiver
       let eachNotaInfo = document.createElement("li");
       eachNotaInfo.innerHTML = `Não Encontramos ${item.requisito} no seu código;`;
 
-      notaInfo.append(eachNotaInfo)
+      notaInfo.append(eachNotaInfo);
     }
 
     let tagsArea = tagInfo.querySelector(".tags");
-    if (item.tags) {
+
+    if (item.tags) { // Se tiver tag
       item.tags.forEach((tag) => {
         let inputResult = document.createElement("input");
 
@@ -52,20 +59,21 @@ const showOnScreen = (obj) => {
         inputResult.value = `${tag}`;
         tagsArea.append(inputResult);
       });
-    } else {
+    } else { // Senao tiver
       tagsArea.innerHTML = `Não encontramos ${item.requisito} no seu código`;
     }
 
     info.append(tagInfo);
   });
 
-  document.querySelector(".nota").innerHTML = nota;
+  document.querySelector(".nota").innerHTML = nota; // Inserindo nota na div
   document.querySelector(".circle-2").style.strokeDashoffset =
-    640 - 640 * (nota / 10);
+    640 - 640 * (nota / 10); // atualizando circulo de progresso
 };
 
-// ===============================================================
 
+
+// Adiciona eventos a cada requisito em tela
 const addEventToTagInfo = () => {
   let requisitoEl = document.querySelectorAll(".info .requisito");
   requisitoEl.forEach((el) => {
@@ -83,15 +91,18 @@ const addEventToTagInfo = () => {
   });
 };
 
-// ==================================================================
 
+
+// Se tiverem os inputs
 if (inputs) {
+  // Limpando os espaços vazios do input
   window.addEventListener("load", () => {
     inputs.forEach((input) => {
       input.value = "";
     });
   });
 
+  // Checagem do input após o primeiro clique no botão 
   inputs.forEach((input, indice) =>
     input.addEventListener("input", () => {
       if (apertou) {
@@ -101,20 +112,24 @@ if (inputs) {
   );
 }
 
+
+
+// Evento de clique ao botao submit
 btnEnviar.addEventListener("click", (e) => {
   e.preventDefault();
-  apertou = true;
+  apertou = true; // apertou
   let status = true;
 
   for (let i = 0; i < inputs.length; i++) {
-    if (!run(inputs[i], i)) {
-      status = false;
+    // 
+    if (!run(inputs[i], i)) { // Se os inputs nao forem aprovados
+      status = false; // Impeça de algo acontecer
     }
   }
 
-  if (status) {
-    const codigo = new Code(inputs[0].value, inputs[1].value);
-    showOnScreen(codigo.classifyCode());
-    addEventToTagInfo();
+  if (status) { // Se os inputs estiverem com valores corretos
+    const codigo = new Code(inputs[0].value, inputs[1].value); // Instancie o objeto
+    showOnScreen(codigo.classifyCode()); // classifique as tags e rode a função para inserir na tela
+    addEventToTagInfo(); // Adicione os eventos a cada requisito criado
   }
 });
