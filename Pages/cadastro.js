@@ -73,6 +73,7 @@ function validarNome() {
         nomeCompleto.classList.remove("is-valid");
         nomeCompleto.classList.add("is-invalid");
     }
+
 }
 //------------------ E-MAIL ----------------- //
 
@@ -184,4 +185,40 @@ botao.addEventListener("click", function (event) {
     getApi();
     validarNumero();
     redirecionar();
+
 });
+
+
+function valores() {
+
+    const urlParams = new URLSearchParams(window.location.search);
+
+    const nomeParam = urlParams.get('name');
+    const emailParam = urlParams.get('email');
+
+    document.getElementById('nome').value = nomeParam;
+    document.getElementById('email').value = emailParam;
+
+
+    /* if (urlParams == true) {
+
+        urlParams.forEach(parametro => {
+            console.log(parametro)
+        });
+        emailInput.add(myKeys);
+    } */
+
+
+
+    /* const params = new URLSearchParams(window.location.search)
+    for (const param of params) {   Outra forma de fazer
+        console.log(param)
+    } */
+
+
+    /* console.log(nomeParam, emailParam);
+          //  Consoles.log para testar //
+    console.log(urlParams.toString()) */
+}
+
+valores();
