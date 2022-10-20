@@ -1,5 +1,5 @@
-import { Code } from "./class.js";
-import { run, checkInput, showError, clearErrors } from "./input.js";
+import { Code } from "./modules/class.js";
+import { run, checkInput, showError, clearErrors } from "./modules/input.js";
 
 const inputs = document.querySelectorAll("textarea");
 const btnEnviar = document.querySelector('[type="submit"]');
@@ -7,6 +7,7 @@ let apertou = false;
 
 // =================================================================
 const showOnScreen = (obj) => {
+  // location.href = location.href = '#resultado'
   let resultado = document.querySelector('.resultado')
   let info = document.querySelector(".info");
   let nota = 0;
@@ -31,7 +32,7 @@ const showOnScreen = (obj) => {
 
     if (item.tags.length > 0) {
       let eachNotaInfo = document.createElement("li");
-      eachNotaInfo.innerHTML = `Encontramos ${item.tags.length} ${item.requisito} no seu código;`;
+      eachNotaInfo.innerHTML = `Há ${item.tags.length} ${item.requisito}`;
 
       notaInfo.append(eachNotaInfo);
     } else {
@@ -59,7 +60,7 @@ const showOnScreen = (obj) => {
   });
 
   document.querySelector(".nota").innerHTML = nota;
-  document.querySelector("circle").style.strokeDashoffset =
+  document.querySelector(".circle-2").style.strokeDashoffset =
     640 - 640 * (nota / 10);
 };
 

@@ -4,6 +4,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ---------- Página Home ----------- */
 .card-section,
 #footer > div,
@@ -154,13 +158,27 @@ textarea.input {
   position: absolute;
 }
 
-circle {
+.circle-2 {
   fill: none;
   stroke: var(--cor-p1);
   stroke-width: 32px;
   stroke-dasharray: 640;
   stroke-dashoffset: 640;
   transition: 2s;
+}
+
+
+.circle-1 {
+  fill: none;
+  stroke:rgba(0, 0, 0, 0.078);
+  stroke-width: 32px;
+  stroke-dasharray: 640;
+  stroke-dashoffset: 0;
+  transition: 2s;
+}
+
+.svg-2 {
+  position: absolute;
 }
 
 .input-result {
