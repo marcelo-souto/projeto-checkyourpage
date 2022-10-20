@@ -48,6 +48,7 @@ a {
 .btn-2 {
   background-color: var(--cor-9);
   color: #DCDCDC;
+  text-decoration: none !important;
 }
 
 .btn-1:hover {
