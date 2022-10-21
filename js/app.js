@@ -27,6 +27,7 @@ const showOnScreen = (obj) => {
   notaInfo.innerHTML = "";
   info.innerHTML = "";
 
+  
   obj.forEach((item) => {
     let tagInfo = document.querySelector(".modelo .tag-info").cloneNode(true);
 
