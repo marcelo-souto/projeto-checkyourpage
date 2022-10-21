@@ -32,6 +32,6 @@ btnEnviar.addEventListener("click", (e) => {
   if (status) {
     let nome = document.querySelector("#nome").value;
     let email = document.querySelector("#email").value;
-    window.location = `./Pages/contato.html?nome=${nome}&email=${email}`;
+    window.location = `./cadastro.html?name=${nome}&email=${email}`;
   }
 });
