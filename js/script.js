@@ -157,6 +157,7 @@ envio.addEventListener('click', (enviar) => {
 
 
   // Validar Senha 
+  
   function senhaValida(p) {
     let retorno = false;
     let letrasMaiusculas = /[A-Z]/;
