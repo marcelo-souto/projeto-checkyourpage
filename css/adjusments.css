@@ -4,19 +4,28 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* ---------- Página Home ----------- */
 .card-section,
 #footer > div,
-#loginpage .main-login div{
+#loginpage .main-login div,
+#app .main-app {
   border-color: var(--cor-8) !important;
 }
 
-#homepage .main-home {
+#homepage .main-home, #instrucao .main-instrucao {
   padding: 180px 0 140px 0;
   background: url("../img/bg-main-2.svg"), var(--grad-2);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+#homepage .sec-1 img {
+  filter: drop-shadow(-2px 2px 10px rgba(0, 0, 0, 0.204));
 }
 
 @media (max-width: 768px) {
@@ -90,6 +99,159 @@ a {
   filter: brightness(1.5) contrast(92%);
 }
 
+/* ----------- Pagina do app ----------- */
+
+textarea.input {
+  resize: none;
+}
+
+#app main p {
+  max-width: 60ch;
+}
+
+.resultado {
+  height: 0px;
+  transition: .5s;
+  overflow: hidden;
+}
+
+.resultado-demo {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+.tag-info {
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.tag-info .tags {
+  height: 0px;
+  padding: 0px 12px;
+  transition: all .3s ease-in-out;
+}
+
+.tags.active {
+  padding: 12px 12px;
+}
+
+.tag-info .requisito {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1b1b1b;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.nota-detalhes {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 32px;
+  margin: 0 auto;
+  
+}
+
+.nota-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nota {
+  position: absolute;
+}
+
+.circle-2 {
+  fill: none;
+  stroke: #FF2727;
+  stroke-width: 32px;
+  stroke-dasharray: 640;
+  stroke-dashoffset: 640;
+  transition: 2s;
+}
+
+
+.circle-1 {
+  fill: none;
+  stroke:rgba(0, 0, 0, 0.078);
+  stroke-width: 32px;
+  stroke-dasharray: 640;
+  stroke-dashoffset: 0;
+  transition: 2s;
+}
+
+.svg-2 {
+  position: absolute;
+}
+
+.input-result {
+  width: 100%;
+  outline: none;
+  border: 2px solid var(--cor-p1);
+  border-radius: 3px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .resultado-demo {
+    grid-template-columns: 1fr;
+  }
+  .resultado-demo div:nth-child(2) {
+    order: 1;
+  }
+  .resultado-demo div:nth-child(1) {
+    order: 2;
+  }
+  .nota-detalhes {
+    width: 100% !important;
+  }
+  .nota-container {
+    display: flex;
+  }
+}
+
+/* Página de instruções */
+
+#instrucao .info-lista li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#instrucao .info-lista li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  display: block;
+  margin-right: 12px;
+  transition: .3s;
+}
+
+#instrucao .info-lista li:hover::before {
+  content: '';
+  width: 24px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  display: block;
+  margin-right: 8px;
+}
+
+#instrucao .sec-1, #instrucao .sec-3 {
+  background-color: hsl(0, 0%, 99%);
+}
+
+#instrucao .sec-2 img, #instrucao .sec-3 img, #instrucao .sec-4 img {
+  border-radius: 12px;
+  display: block;
+}
+
 /* --------- Classes Utilitarias ----------- */
 
 .opacity-0 {
@@ -97,7 +259,7 @@ a {
 }
 
 .padding-x-80 {
-  padding: 80px 0px;
+  padding: 80px 0px !important;
 }
 
 .max-width-30ch {
@@ -107,7 +269,6 @@ a {
 .formulario {
   background-color: #1e1e1e;
 }
-
 
 /* -------- Media-queries das classes Utilitarias ------------ */
 @media (max-width: 1600px) {

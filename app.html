@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body id="loginpage">
+  <body id="app">
     <div class="layer">
       <div class="loader"></div>
     </div>
@@ -52,9 +52,9 @@
       class="border-bottom fonte-corpo bg-grad-2 position-fixed w-100"
     >
       <nav class="container navbar navbar-expand-md">
-        <a class="navbar-brand" href="./index.html"
-          ><img width="160" src="./img/logo.svg" alt="check your page logo"
-        /></a>
+        <a class="navbar-brand" href="./index.html">
+          <img width="160" src="./img/logo.svg" alt="check your page logo" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -97,135 +97,161 @@
             class="list-unstyled d-none d-sm-flex align-items-center mb-0 ml-4"
           >
             <li>
-              <a class="mr-2" href="#"
-                ><img src="./img/icones-redes/Github.svg" alt="Github"
-              /></a>
+              <a class="mr-2" href="#">
+                <img src="./img/icones-redes/Github.svg" alt="Github" />
+              </a>
             </li>
             <li>
-              <a class="mr-2" href="#"
-                ><img src="./img/icones-redes/Twitter.svg" alt="Twitter"
-              /></a>
+              <a class="mr-2" href="#">
+                <img src="./img/icones-redes/Twitter.svg" alt="Twitter" />
+              </a>
             </li>
             <li>
-              <a href="#"
-                ><img src="./img/icones-redes/Discord.svg" alt="Discord"
-              /></a>
+              <a href="#">
+                <img src="./img/icones-redes/Discord.svg" alt="Discord" />
+              </a>
             </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main class="main-login container">
-      <div class="row align-items-center">
-        <div
-          class="col-xl-8 col-lg-6 col-md-6 d-none d-md-flex padding-x-80 flex-column align-items-center"
-        >
-          <img class="w-100 px-5" src="./img/logo.svg" alt="check your page logo" />
-
-          <p class="h5 mt-3 fonte-satoshi font-weight-normal cor-4 text-center">
-            Responsividade, acessibilidade e semântica.
-          </p>
-        </div>
-
-        <div
-          class="col-xl-4 col-lg-6 col-md-6 padding-x-80 cor-0 px-5 border-left"
-        >
-          <form class="px-5 py-4">
-            <h1 class="h4 fonte-satoshi font-weight-medium cor-p1 pb-4">
-              login
+    <main class="main-app border-bottom">
+      <div class="container">
+        <div class="row padding-x-80">
+          <div class="col-12">
+            <h1
+              class="fonte-satoshi font-weight-bold display-4 mb-4 titulo-xl text-center"
+            >
+              Teste agora nossa aplicação
             </h1>
+            <p class="fonte-corpo cor-7 text-center mx-auto">
+              Nossa aplicação tem como base a <strong class="text-dark">tríade</strong> de <strong class="text-dark">boas práticas</strong> recomendadas pelo Google, focadas em <strong class="text-dark">responsividade</strong>, <strong class="text-dark">acessibilidade</strong> e <strong class="text-dark">semântica</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
 
-            <div class="form-group pb-3 position-relative">
-              <label
-                class="fonte-satoshi font-weight-medium cor-0 font-weight-normal"
-                for="email"
-                >Email:</label
+      <div class="bg-grad-2">
+        <div class="container">
+          <div class="row pt-5 mb-3">
+            <div class="col-md-6 position-relative">
+              <label class="fonte-corpo cor-4" for="html"
+                >Cole ou digite o seu código HTML aqui:</label
               >
-              <input
-                class="input w-100 h-100 p-2 cor-4"
-                type="text"
-                id="email"
-                autocomplete="off"
-                data-rules="required email"
-              />
+              <textarea
+                class="input w-100 p-2 cor-4"
+                id="html"
+                cols="30"
+                rows="16"
+                spellcheck="false"
+                data-rules="required html"
+              >
+              </textarea>
               <small class="invalid-feedback position-absolute"></small>
             </div>
 
-            <div class="form-group">
-              <div class="d-flex justify-content-between">
-                <label
-                  class="fonte-satoshi font-weight-medium cor-0 font-weight-normal"
-                  for="senha"
-                  >Senha:</label
-                >
-                <a
-                  class="fonte-corpo cor-5 font-weight-normal"
-                  href="./recuperacao.html"
-                  >esqueceu?</a
-                >
-              </div>
-              <div class="campo-senha pb-4">
-                <input
-                  class="input w-100 h-100 p-2 cor-4"
-                  type="password"
-                  id="senha"
-                  autocomplete="off"
-                  data-rules="required min=8"
-                />
-                <small class="invalid-feedback position-absolute"></small>
-
-                <svg
-                  class="icone-senha"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M24 12C24 12 19.5 3.75 12 3.75C4.5 3.75 0 12 0 12C0 12 4.5 20.25 12 20.25C19.5 20.25 24 12 24 12ZM1.7595 12C2.48477 10.8977 3.31896 9.87103 4.2495 8.9355C6.18 7.002 8.82 5.25 12 5.25C15.18 5.25 17.8185 7.002 19.752 8.9355C20.6825 9.87103 21.5167 10.8977 22.242 12C22.155 12.1305 22.059 12.2745 21.9495 12.432C21.447 13.152 20.7045 14.112 19.752 15.0645C17.8185 16.998 15.1785 18.75 12 18.75C8.82 18.75 6.1815 16.998 4.248 15.0645C3.31747 14.129 2.48328 13.1023 1.758 12H1.7595Z"
-                    fill="#545454"
-                  />
-                  <path
-                    d="M12 8.25C11.0054 8.25 10.0516 8.64509 9.34835 9.34835C8.64509 10.0516 8.25 11.0054 8.25 12C8.25 12.9946 8.64509 13.9484 9.34835 14.6517C10.0516 15.3549 11.0054 15.75 12 15.75C12.9946 15.75 13.9484 15.3549 14.6517 14.6517C15.3549 13.9484 15.75 12.9946 15.75 12C15.75 11.0054 15.3549 10.0516 14.6517 9.34835C13.9484 8.64509 12.9946 8.25 12 8.25ZM6.75 12C6.75 10.6076 7.30312 9.27226 8.28769 8.28769C9.27226 7.30312 10.6076 6.75 12 6.75C13.3924 6.75 14.7277 7.30312 15.7123 8.28769C16.6969 9.27226 17.25 10.6076 17.25 12C17.25 13.3924 16.6969 14.7277 15.7123 15.7123C14.7277 16.6969 13.3924 17.25 12 17.25C10.6076 17.25 9.27226 16.6969 8.28769 15.7123C7.30312 14.7277 6.75 13.3924 6.75 12Z"
-                    fill="#545454"
-                  />
-                  <rect
-                    x="0.175781"
-                    y="4.81543"
-                    width="2"
-                    height="27.3261"
-                    transform="rotate(-56.187 0.175781 4.81543)"
-                    fill="#545454"
-                  />
-                </svg>
-              </div>
-
-              <div class="form-group">
-                <input type="checkbox" id="lembredemim" />
-                <label class="fonte-corpo cor-4" for="lembredemim"
-                  >Lembre de mim</label
-                >
-              </div>
-            </div>
-
-            <div>
-              <button type="submit" class="btn-1 btn-100">entrar</button>
-            </div>
-
-            <div class="pt-4 text-center">
-              <span class="fonte-corpo"
-                >não tem uma conta?
-                <a class="cor-p1" href="./Pages/contato.html"
-                  >cadastre-se</a
-                ></span
+            <div class="col-md-6 mt-5 mt-md-0 position-relative">
+              <label class="fonte-corpo cor-4" for="css"
+                >Cole ou digite o seu código CSS aqui:</label
               >
+              <textarea
+                class="input w-100 p-2 cor-4"
+                id="css"
+                cols="30"
+                rows="16"
+                spellcheck="false"
+                data-rules="required css"
+              >
+              </textarea>
+              <small class="invalid-feedback position-absolute"></small>
             </div>
-          </form>
+          </div>
+
+          <div class="row pt-4 pb-5">
+            <div class="col-12">
+              <button class="btn-1" type="submit">testar agora</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+
+    <div class="modelo d-none">
+      <div class="tag-info mb-3">
+        <div class="requisito">
+          <h3
+            class="requisito-titulo fonte-satoshi font-weigth-medium h5 cor-4 mb-0"
+          ></h3>
+          <div
+            class="requisito-nota fonte-satoshi font-weight-bold h6 cor-p1 mb-0"
+          ></div>
+        </div>
+
+        <div class="tags fonte-corpo cor-7"></div>
+      </div>
+    </div>
+
+    <section id="resultado" class="resultado container">
+      <div class="row">
+        <h1
+          class="col-12 fonte-satoshi font-weight-bold display-4 mb-5 titulo-xl text-center"
+        >
+          Resultado
+        </h1>
+      </div>
+
+      <div class="resultado-demo">
+        <div class="info"></div>
+        <div>
+          <div class="nota-detalhes">
+            <div class="nota-container">
+              <div class="nota fonte-satoshi font-weight-bold h1"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="240px"
+                height="240px"
+                class="mb-4 svg-1"
+              >
+                <defs></defs>
+                <circle
+                  class="circle-1"
+                  cx="120"
+                  cy="120"
+                  r="100"
+                  stroke-linecap="round"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="240px"
+                height="240px"
+                class="mb-4 svg-2"
+              >
+                <defs></defs>
+                <circle
+                  class="circle-2"
+                  cx="120"
+                  cy="120"
+                  r="100"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
+            <div>
+              <h4 class="fonte-satoshi font-weight-bold">Detalhes</h4>
+              <ul
+                class="nota-info fonte-corpo cor-7 list-unstyled d-flex flex-column"
+              ></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer id="footer" class="bg-grad-2 padding-x-80 pb-0">
@@ -342,8 +368,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- <script src="./js/input.js"></script> -->
-    <script type="module" src="./js/login.js"></script>
+    <script type="module" src="./js/app.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

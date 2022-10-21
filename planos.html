@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="./planos.css" />
+  <link rel="stylesheet" href="./css/planos.css" />
   <link rel="stylesheet" href="./css/style.css"> 
   <title>Check your page - Planos e serviços</title>
 
@@ -15,62 +15,74 @@
 
 <body>
 
-  <header id="header" class="border-bottom fonte-corpo bg-grad-2 position-fixed w-100">
-    <nav class="container navbar navbar-expand-md">
-      <a class="navbar-brand" href="./index.html">
-        <img width="160" src="./img/logo.svg" alt="check your page logo" />
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado"
-        aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon">
-          <img width="28" src="./img/menu-hamburger-icon.svg" alt="icone menu" />
-        </span>
-      </button>
+  <header
+      id="header"
+      class="border-bottom fonte-corpo bg-grad-2 position-fixed w-100"
+    >
+      <nav class="container navbar navbar-expand-md">
+        <a class="navbar-brand" href="./index.html"
+          ><img width="160" src="./img/logo.svg" alt="check your page logo"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#conteudoNavbarSuportado"
+          aria-controls="conteudoNavbarSuportado"
+          aria-expanded="false"
+          aria-label="Alterna navegação"
+        >
+          <span class="navbar-toggler-icon">
+            <img
+              width="28"
+              src="./img/menu-hamburger-icon.svg"
+              alt="icone menu"
+            />
+          </span>
+        </button>
 
-      <!-- Navbar -->
-      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link cor-5 my-1 my-sm-0" href="#">Nosso Produto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link cor-5 my-1 my-sm-0" href="#">Planos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link cor-5 my-1 my-sm-0" href="#">Nossa Equipe</a>
-          </li>
-        </ul> 
-        <li class="user-icon nav-item ml-0 ml-sm-3 align-self-md-center">
-          <img width="22" src="./img/user.svg" alt="icone usuario">
+        <!-- Navbar -->
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link cor-5 my-1 my-sm-0" href="./app.html"
+                >Nosso Produto</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cor-5 my-1 my-sm-0" href="./planos.html"
+                >Planos</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link cor-5 my-1 my-sm-0" href="./equipe.html"
+                >Nossa Equipe</a
+              >
+            </li>
+          </ul>
 
-          <div class="user-options">
-            <a href="./login.html" class="btn-1 btn-100">login</a>
-            <a href="./cadastro.html" class="btn-2 btn-100">cadastre-se</a>
-          </div>
-
-        </li>
-
-
-        <ul class="list-unstyled d-none d-sm-flex align-items-center mb-0 ml-4">
-          <li>
-            <a class="mr-2" href="#">
-              <img src="./img/icones-redes/Github.svg" alt="Github" />
-            </a>
-          </li>
-          <li>
-            <a class="mr-2" href="#">
-              <img src="./img/icones-redes/Twitter.svg" alt="Twitter" />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src="./img/icones-redes/Discord.svg" alt="Discord" />
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+          <ul
+            class="list-unstyled d-none d-sm-flex align-items-center mb-0 ml-4"
+          >
+            <li>
+              <a class="mr-2" href="#"
+                ><img src="./img/icones-redes/Github.svg" alt="Github"
+              /></a>
+            </li>
+            <li>
+              <a class="mr-2" href="#"
+                ><img src="./img/icones-redes/Twitter.svg" alt="Twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./img/icones-redes/Discord.svg" alt="Discord"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
   <main>
     <section class="container mt-3 pt-5 d-flex flex-column mb-2">
@@ -198,88 +210,96 @@
   <br>
 
   <!-- Footer -->
-  <footer id="footer" class="bg-grad-2 padding-x-80 pb-0">
-    <div class="container">
-      <div class="row">
-        <div class="col-md mb-5 mb-md-0">
-          <img src="./img/logo.svg" width="160" alt="check your page" />
-        </div>
-        <div class="col-md mb-5 mb-md-0">
-          <h3 class="h4 fonte-satoshi cor-0 text-uppercase mb-4">contato</h3>
-
-          <ul class="list-unstyled mb-5">
-            <li>
-              <a class="fonte-corpo cor-5" href="tel:+552145093000">(21) 4509-3000</a>
-            </li>
-            <li>
-              <a class="fonte-corpo cor-5" href="mailto:email@frontenders.com">email@frontenders.com</a>
-            </li>
-          </ul>
-
-          <address>
-            <p class="fonte-corpo cor-5 mb-0">Rua das Arvores, 2568</p>
-            <p class="fonte-corpo cor-5">RIo de Janeiro - RJ</p>
-          </address>
-
-          <ul class="list-unstyled d-flex align-items-center">
-            <li class="mr-3">
-              <a href="#">
-                <img src="./img/icones-redes/Twitter.svg" alt="twitter" />
-              </a>
-            </li>
-            <li class="mr-3">
-              <a href="#">
-                <img src="./img/icones-redes/Facebook.svg" alt="facebook" />
-              </a>
-            </li>
-            <li class="mr-3">
-              <a href="#">
-                <img src="./img/icones-redes/YouTube.svg" alt="youtube" />
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <img src="./img/icones-redes/Discord.svg" alt="discord" />
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="col-md">
-          <h3 class="h4 fonte-satoshi cor-0 text-uppercase mb-4">
-            informações
-          </h3>
-          <ul class="list-unstyled mb-5">
-            <li>
-              <a class="fonte-corpo cor-5" href="#">Home</a>
-            </li>
-            <li>
-              <a class="fonte-corpo cor-5" href="#">Minha Conta</a>
-            </li>
-            <li>
-              <a class="fonte-corpo cor-5" href="#">Nossos Produtos</a>
-            </li>
-            <li>
-              <a class="fonte-corpo cor-5" href="#">Planos</a>
-            </li>
-            <li>
-              <a class="fonte-corpo cor-5" href="#">Lista de Espera</a>
-            </li>
-            <li>
-              <a class="fonte-corpo cor-5" href="#">Nossa Equipe</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="row border-top w-100 mt-0 mt-sm-5 py-4">
+    <footer id="footer" class="bg-grad-2 padding-x-80 pb-0">
       <div class="container">
-        <p class="container fonte-corpo cor-7 mb-0">
-          © Alguns direitos reservados. 2022
-        </p>
+        <div class="row">
+          <div class="col-md mb-5 mb-md-0">
+            <img src="./img/logo.svg" width="160" alt="check your page" />
+          </div>
+          <div class="col-md mb-5 mb-md-0">
+            <h3 class="h4 fonte-satoshi cor-0 text-uppercase mb-4">contato</h3>
+
+            <ul class="list-unstyled mb-5">
+              <li>
+                <a class="fonte-corpo cor-5" href="tel:+552145093000"
+                  >(21) 4509-3000</a
+                >
+              </li>
+              <li>
+                <a class="fonte-corpo cor-5" href="mailto:email@frontenders.com"
+                  >email@frontenders.com</a
+                >
+              </li>
+            </ul>
+
+            <address>
+              <p class="fonte-corpo cor-5 mb-0">Rua das Arvores, 2568</p>
+              <p class="fonte-corpo cor-5">RIo de Janeiro - RJ</p>
+            </address>
+
+            <ul class="list-unstyled d-flex align-items-center">
+              <li class="mr-3">
+                <a href="#">
+                  <img src="./img/icones-redes/Twitter.svg" alt="twitter" />
+                </a>
+              </li>
+              <li class="mr-3">
+                <a href="#">
+                  <img src="./img/icones-redes/Facebook.svg" alt="facebook" />
+                </a>
+              </li>
+              <li class="mr-3">
+                <a href="#">
+                  <img src="./img/icones-redes/YouTube.svg" alt="youtube" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/icones-redes/Discord.svg" alt="discord" />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md">
+            <h3 class="h4 fonte-satoshi cor-0 text-uppercase mb-4">
+              informações
+            </h3>
+            <ul class="list-unstyled mb-5">
+              <li>
+                <a class="fonte-corpo cor-5" href="./index.html">Home</a>
+              </li>
+              <li>
+                <a class="fonte-corpo cor-5" href="./login.html">Minha Conta</a>
+              </li>
+              <li>
+                <a class="fonte-corpo cor-5" href="./app.html">Nosso Produto</a>
+              </li>
+              <li>
+                <a class="fonte-corpo cor-5" href="./planos.html">Planos</a>
+              </li>
+              <li>
+                <a class="fonte-corpo cor-5" href="./Pages/contato.html"
+                  >Lista de Espera</a
+                >
+              </li>
+              <li>
+                <a class="fonte-corpo cor-5" href="./equipe.html"
+                  >Nossa Equipe</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+      <div class="row border-top w-100 mt-0 mt-sm-5 py-4">
+        <div class="container">
+          <p class="container fonte-corpo cor-7 mb-0">
+            © Alguns direitos reservados. 2022
+          </p>
+        </div>
+      </div>
+    </footer>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

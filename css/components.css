@@ -20,6 +20,10 @@ a {
   letter-spacing: 0.2rem;
 }
 
+#footer {
+  padding-bottom: 0px !important;
+}
+
 /* ----------- Botões ------------- */
 .btn-1, .btn-2 {
   line-height: 1.2;
@@ -48,6 +52,7 @@ a {
 .btn-2 {
   background-color: var(--cor-9);
   color: #DCDCDC;
+  text-decoration: none !important;
 }
 
 .btn-1:hover {

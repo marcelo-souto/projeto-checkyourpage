@@ -1,16 +1,12 @@
 const btnCima = document.querySelector(".btn-voltar-cima"); // Botao voltar para cima
-const brand = document.querySelector("#homepage .navbar-brand"); // Logo no header
+const brand = document.querySelector(".navbar-brand"); // Logo no header
 
 const target = document.querySelectorAll("[data-anime]"); // Elementos com data-anime
 
 const userOptions = document.querySelector(".user-options"); // Menu do usuario
 const iconeUser = document.querySelector(".user-icon"); // Icone do menu de usuario
 
-const iconeSenha = document.querySelector(".icone-senha"); // Icone de senha no input
-const inputSenha = document.querySelector("#senha"); // input de senha
-
 const btnContinuar = document.querySelector(".btn-continuar"); // Botao continuar homepage
-// const parametros = new URLSearchParams(location.search);
 
 /* ==================================== Funções ================================= */
 
@@ -28,7 +24,6 @@ const showElements = () => {
     }
   }
 };
-
 // Animar conforme a diferença entre o elemento e o tamanho da tela
 const animate = () => {
   const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
@@ -87,28 +82,6 @@ const debounce = (func, wait, immediate) => {
 // Adicionando funcao de voltar ao topo ao botao
 if (btnCima) {
   btnCima.addEventListener("click", scrollToTop);
-}
-
-// Pegando valores do input da pagina home e enviando estes valores via URL
-if (btnContinuar) {
-  btnContinuar.addEventListener("click", (e) => {
-    e.preventDefault(); // PreventDefault pra evitar que rode
-    let nome = document.querySelector("#nome").value;
-    let email = document.querySelector("#email").value;
-    window.location = `./teste.html?nome=${nome}&email=${email}`;
-  });
-}
-
-if (iconeSenha) {
-  iconeSenha.addEventListener("click", () => {
-    if (inputSenha.getAttribute("type") === "password") {
-      inputSenha.setAttribute("type", "text");
-      iconeSenha.querySelector("rect").classList.add("d-none");
-    } else if (inputSenha.getAttribute("type") === "text") {
-      inputSenha.setAttribute("type", "password");
-      iconeSenha.querySelector("rect").classList.remove("d-none");
-    }
-  });
 }
 
 animate();
