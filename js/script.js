@@ -1,5 +1,5 @@
 const btnCima = document.querySelector(".btn-voltar-cima"); // Botao voltar para cima
-const brand = document.querySelector("#homepage .navbar-brand"); // Logo no header
+const brand = document.querySelector(".navbar-brand"); // Logo no header
 
 const target = document.querySelectorAll("[data-anime]"); // Elementos com data-anime
 
@@ -24,7 +24,6 @@ const showElements = () => {
     }
   }
 };
-
 // Animar conforme a diferença entre o elemento e o tamanho da tela
 const animate = () => {
   const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;

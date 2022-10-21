@@ -42,7 +42,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
-  <body id="homepage">
+  <body id="instrucao">
     <div class="layer">
       <div class="loader"></div>
     </div>
@@ -100,7 +100,7 @@
     </header>
 
     <!-- Conteudo principal -->
-    <main class="main-home" class="bg-grad-2">
+    <main class="main-instrucao" class="bg-grad-2">
       <div class="container">
         <div class="row justify-content-center">
           <img class="col-8" src="./img/logo.svg" alt="check your page" />
@@ -117,23 +117,66 @@
       </div>
     </main>
 
-    <!-- Informações sobre o produto -->
-    <section class="sec-1 container my-sm-5 py-sm-5 my-3 py-3">
-      <div class="row">
+    <section class="sec-1 padding-x-80 py-sm-5 my-3 py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg">
+            <h2
+              class="fonte-satoshi font-weight-bold display-4 mb-4 mb-sm-5 titulo-xl text-center text-lg-left"
+            >
+            Como funciona?
+            </h2>
+            <p class="fonte-corpo cor-7 mb-4 mb-md-5 mr-auto mr-lg-5 text-center text-lg-left">
+              Nossa aplicação tem como base a <strong class="text-dark">tríade</strong> de <strong class="text-dark">boas práticas</strong> recomendadas pelo Google, focadas em <strong class="text-dark">responsividade</strong>, <strong class="text-dark">acessibilidade</strong> e <strong class="text-dark">semântica</strong>. Nossa ferramenta checa o seu código e devolve uma nota, sendo ela baseada:
+            </p>
+            <ul class="list-unstyled info-lista fonte-corpo cor-7">
+              <li class="mb-3">
+                utilização de <strong class="text-dark">tags semânticas</strong> contidas no seu site;
+              </li>
+              <li class="mb-3">
+                de <strong class="text-dark">meta tags</strong> de descrição e responsividade;
+              </li>
+              <li class="mb-3">
+                de <strong class="text-dark">atributos de acessibilidade</strong> nas tags;
+              </li>
+              <li class="mb-3">
+                utilização de <strong class="text-dark">media-queries</strong> na estilização no CSS
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg align-self-center">
+            <img
+              src="./img/imagem-exemplo.svg"
+              width="100%"
+              data-anime="top"
+              alt="imagem da aplicação"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-2 padding-x-80 container py-sm-5 my-3 py-3">
+      <div class="row" data-anime="left">
         <div class="col-lg">
           <h2
             class="fonte-satoshi font-weight-bold display-4 mb-4 mb-sm-5 titulo-xl text-center text-lg-left"
           >
-          Garanta que seu</br> site chegue a mais pessoas
+          Primeiros Passos
           </h2>
-          <p class="fonte-corpo cor-7 mb-5 mb-lg-0 mr-auto mr-lg-5 text-center text-lg-left">
-            Aplicações de <strong class="text-dark">sucesso</strong>, que geram mais cliques seguem <strong class="text-dark">boas práticas</strong> de desenvolvimento, focando na <strong class="text-dark">experiência</strong> do usuário e se adaptando as suas características. A maior plataforma de pesquisas do mundo, Google, recomenda a seguir a tríade: <strong class="text-dark">responsividade</strong>, <strong class="text-dark">acessibilidade</strong> e <strong class="text-dark">semântica</strong>. veja mais abaixo:
+          <p class="fonte-corpo cor-7 mb-3 mr-auto mr-lg-5 text-center text-lg-left">
+            Primeiro acesso nossa plataforma através deste <a href="./app.html" class="text-dark font-weight-bold">link</a>. 
+          </p>
+          <p class="fonte-corpo cor-7 mb-3 mr-auto mr-lg-5 text-center text-lg-left">
+            Ao decorrer do site, haverão dois campos de texto. Digite ou cole o seu código <strong class="text-dark">html</strong>, depois o seu código <strong class="text-dark">css</strong>. Clique no botão "testar agora" para prosseguir. 
+          </p>
+          <p class="fonte-corpo cor-7 mb-5 mb-lg-3 mr-auto mr-lg-5 text-center text-lg-left">
+            Clique no botão "testar agora" para prosseguir. 
           </p>
         </div>
         <div class="col-lg">
           <img
-            data-anime="top"
-            src="./img/imagem-exemplo.svg"
+            src="./img/demonst-1.png"
             width="100%"
             alt="imagem da aplicação"
           />
@@ -141,118 +184,117 @@
       </div>
     </section>
 
-    <!-- Pilares do foco da aplicação -->
-    <section  class="sec-2 bg-grad-2 padding-x-80">
+    <section class="sec-3 padding-x-80 py-sm-5 my-3 py-3">
       <div class="container" data-anime="top">
-        <div class="row align-items-center">
-          <div class="col-md-4 card-section border-right mt-4 mt-md-5">
-            <div class="row justify-content-center mb-5" >
-              <img
-                src="./img/icones-main-home/AspectRatio.svg"
-                alt="icone de uma tela responsiva"
-              />
-            </div>
-            <h3
-              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4 titulo-l"
-            >
-              Responsividade
-            </h3>
-
-            <p class="fonte-corpo cor-5 text-center max-width-30ch mx-auto">
-              Garante que seu site se adapte a diversas telas e dispositivos, fazendo com que o seu conteúdo chegue a mais pessoas.
-            </p>
-          </div>
-
-          <div class="col-md-4 card-section border-right mt-4 mt-md-5">
-            <div class="row justify-content-center mb-5">
-              <img
-                src="./img/icones-main-home/HandIndex.svg"
-                alt="icone de uma uma mão com o dedo indicador apontado"
-              />
-            </div>
-            <h3
-              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4 titulo-l"
-            >
-              Acessibilidade
-            </h3>
-
-            <p class="fonte-corpo cor-5 text-center max-width-30ch mx-auto">
-              Novos públicos estão chegando a web a todo momento, garanta que eles sejam incluidos nesse ambiente com acessibilidade e inclusão.
-          </div>
-          <div class="col-md-4 mt-5 mt-md-0">
-            <div class="row justify-content-center mb-5 mt-4 mt-md-5">
-              <img
-                src="./img/icones-main-home/MenuButton.svg"
-                alt="icone de um menu semantico"
-              />
-            </div>
-            <h3
-              class="fonte-satoshi font-weight-medium cor-p1 text-center mb-4 titulo-l"
-            >
-              Semântica
-            </h3>
-            <p class="fonte-corpo cor-5 text-center max-width-30ch mx-auto">
-              É a parte crucial para que seu site ranqueie melhor em páginas de busca e assim alcance grandes públicos.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Lista de Espera -->
-    <section class="sec-3 padding-x-80">
-      <div class="container" data-anime="left">
         <div class="row">
-          <div class="col-12 col-lg-8">
+          <div class="col-lg">
             <h2
               class="fonte-satoshi font-weight-bold display-4 mb-4 mb-sm-5 titulo-xl text-center text-lg-left"
             >
-              Inscreva-se na nossa</br> lista de espera
+            Entendendo o resultado
             </h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 col-lg-8">
-            <p class="fonte-corpo cor-7 mr-sm-5 text-center text-lg-left">
-              Nosso projeto está em fase de <strong class="text-dark">desenvolvimento</strong> e logo logo estará
-              disponível para todos. Para garantir um super <strong class="text-dark">desconto</strong> de apoiador
-              e receber <strong class="text-dark">atualizações</strong> sobre nossa aplicação. <strong class="text-dark">Inscreva-se:</strong>
+            <p class="fonte-corpo cor-7 mb-3 mr-auto mr-lg-5 text-center text-lg-left">
+              Logo abaixo dos campos abrirá uma área com sua <strong class="text-dark">pontuação</strong> e <strong class="text-dark">detalhes</strong> sobre o seu código.
             </p>
+            <p class="fonte-corpo cor-7 mb-3 mr-auto mr-lg-5 text-center text-lg-left">
+              Ao lado esquerdo você pode clicar e conferir com detalhes a <strong class="text-dark">pontuação</strong> de cada requisito e quais linhas do seu código corresponderam a pesquisa da aplicação.
+            </p>
+          </div>
+          <div class="col-lg">
+            <img
+              src="./img/demonst-2.png"
+              width="100%"
+              alt="imagem da aplicação"
+            />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Formulario -->
-    <form class="py-4 formulario">
-      <div class="container" data-anime="left">
-        <div class="row">
-          <div class="col-6 col-md-5">
-            <label class="fonte-satoshi font-weight-medium cor-5" for="nome"
-              >Nome:</label
-            >
-          </div>
-          <div class="col-6 col-md-5">
-            <label class="fonte-satoshi font-weight-medium cor-5" for="email"
-              >Email:</label
-            >
-          </div>
+    <section class="sec-4 padding-x-80 container py-sm-5 my-3 py-3">
+      <div class="row" data-anime="left">
+        <div class="col-lg">
+          <h2
+            class="fonte-satoshi font-weight-bold display-4 mb-4 mb-sm-5 titulo-xl text-center text-lg-left"
+          >
+          Entendendo sua nota e detalhes
+          </h2>
+          <p class="fonte-corpo cor-7 mb-4 mb-sm-5 mr-auto mr-lg-5 text-center text-lg-left">
+            Ao lado direito haverá uma área com sua nota final e detalhamento de quantos itens referentes aos requisitos foram atendidos.
+          </p>
+          <h3 class="fonte-satoshi cor-8 mb-3 mr-auto mr-lg-5 text-center text-lg-left">
+            Requisitos:
+          </h3>
+
+          <p class="fonte-corpo cor-7 mb-3 mb-4 mr-auto mr-lg-5 text-center text-lg-left">
+            Tags semãnticas, atributos de acessibilidade e media-queries:
+          </p>
+
+          <table class="table mb-4 mb-md-5">
+            <thead>
+              <tr>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">menor que 1</th>
+                <td>0</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">menor ou igual a 2</th>
+                <td>1</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">maior que 2</th>
+                <td>2.5</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="fonte-corpo cor-7 mb-3 mb-4 mr-auto mr-lg-5 text-center text-lg-left">
+            Meta tags:
+          </p>
+
+          <table class="table mb-4 mb-md-5">
+            <thead>
+              <tr>
+                <th scope="col">Quantidade</th>
+                <th scope="col">Nota</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">igual a 0</th>
+                <td>0</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">igual a 1</th>
+                <td>1</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">maior que 1</th>
+                <td>2.5</td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
-        <div class="row">
-          <div class="col-6 col-md-5">
-            <input class="input w-100 p-2 cor-4" data-rules="min=2" type="text" id="nome" />
-            <small class="invalid-feedback"></small>
-          </div>
-          <div class="col-6 col-md-5">
-            <input class="input w-100 p-2 cor-4" data-rules="min=2 email" type="email" id="email" />
-            <small class="invalid-feedback"></small>
-          </div>
-          <div class="col-12 col-sm-2 mt-4 mt-md-0">
-            <button class="btn-1" type="submit">continuar</button>
-          </div>
+        <div class="col-lg">
+          <img
+            src="./img//demonst-3.svg"
+            width="100%"
+            class="ml-0 ml-lg-5"
+            alt="cores e classificacoes"
+          />
         </div>
       </div>
-    </form>
+    </section>
 
     <!-- Footer -->
     <footer id="footer" class="bg-grad-2 padding-x-80 pb-0">
@@ -365,7 +407,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script type="module" src="./js/home.js"></script>
     <script src="./js/script.js"></script>
   </body>
 </html>

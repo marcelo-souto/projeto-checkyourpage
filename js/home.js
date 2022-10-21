@@ -17,7 +17,6 @@ if (inputs) {
   );
 }
 
-
 // Adicionando evento ao botao submit
 btnEnviar.addEventListener("click", (e) => {
   e.preventDefault();
@@ -33,6 +32,6 @@ btnEnviar.addEventListener("click", (e) => {
   if (status) {
     let nome = document.querySelector("#nome").value;
     let email = document.querySelector("#email").value;
-    window.location = `./cadastro.html?nome=${nome}&email=${email}`;
+    window.location = `./Pages/contato.html?nome=${nome}&email=${email}`;
   }
 });

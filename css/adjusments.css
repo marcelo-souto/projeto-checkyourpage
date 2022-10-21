@@ -16,12 +16,16 @@ html {
   border-color: var(--cor-8) !important;
 }
 
-#homepage .main-home {
+#homepage .main-home, #instrucao .main-instrucao {
   padding: 180px 0 140px 0;
   background: url("../img/bg-main-2.svg"), var(--grad-2);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+}
+
+#homepage .sec-1 img {
+  filter: drop-shadow(-2px 2px 10px rgba(0, 0, 0, 0.204));
 }
 
 @media (max-width: 768px) {
@@ -139,12 +143,11 @@ textarea.input {
 }
 
 .nota-detalhes {
-  width: max-content;
   background-color: #f5f5f5;
   border-radius: 8px;
   padding: 32px;
   margin: 0 auto;
-  max-width: 360px;
+  
 }
 
 .nota-container {
@@ -160,7 +163,7 @@ textarea.input {
 
 .circle-2 {
   fill: none;
-  stroke: var(--cor-p1);
+  stroke: #FF2727;
   stroke-width: 32px;
   stroke-dasharray: 640;
   stroke-dashoffset: 640;
@@ -191,6 +194,60 @@ textarea.input {
   font-size: 0.95rem;
 }
 
+@media (max-width: 768px) {
+  .resultado-demo {
+    grid-template-columns: 1fr;
+  }
+  .resultado-demo div:nth-child(2) {
+    order: 1;
+  }
+  .resultado-demo div:nth-child(1) {
+    order: 2;
+  }
+  .nota-detalhes {
+    width: 100% !important;
+  }
+  .nota-container {
+    display: flex;
+  }
+}
+
+/* Página de instruções */
+
+#instrucao .info-lista li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#instrucao .info-lista li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  display: block;
+  margin-right: 12px;
+  transition: .3s;
+}
+
+#instrucao .info-lista li:hover::before {
+  content: '';
+  width: 24px;
+  height: 8px;
+  background-color: var(--cor-p1);
+  display: block;
+  margin-right: 8px;
+}
+
+#instrucao .sec-1, #instrucao .sec-3 {
+  background-color: hsl(0, 0%, 99%);
+}
+
+#instrucao .sec-2 img, #instrucao .sec-3 img, #instrucao .sec-4 img {
+  border-radius: 12px;
+  display: block;
+}
+
 /* --------- Classes Utilitarias ----------- */
 
 .opacity-0 {
@@ -198,7 +255,7 @@ textarea.input {
 }
 
 .padding-x-80 {
-  padding: 80px 0px;
+  padding: 80px 0px !important;
 }
 
 .max-width-30ch {
@@ -208,7 +265,6 @@ textarea.input {
 .formulario {
   background-color: #1e1e1e;
 }
-
 
 /* -------- Media-queries das classes Utilitarias ------------ */
 @media (max-width: 1600px) {

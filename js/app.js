@@ -34,7 +34,7 @@ const showOnScreen = (obj) => {
 
     // Inserindo o nome e nota de cada requisito
     tagInfo.querySelector(".requisito-titulo").innerHTML = item.requisito;
-    tagInfo.querySelector(".requisito-nota").innerHTML = item.nota.toFixed(1);
+    tagInfo.querySelector(".requisito-nota").innerHTML = item.nota === 0 ? item.nota : item.nota.toFixed(1);
 
     if (item.tags.length > 0) { // Se tiver tags
       let eachNotaInfo = document.createElement("li");
@@ -60,18 +60,35 @@ const showOnScreen = (obj) => {
         tagsArea.append(inputResult);
       });
     } else { // Senao tiver
-      tagsArea.innerHTML = `Não encontramos ${item.requisito} no seu código`;
+      tagsArea.innerHTML = `<p class="pb-2">Não encontramos ${item.requisito} no seu código</p>`;
     }
 
     info.append(tagInfo);
   });
 
+  const circle = document.querySelector(".circle-2")
+  circle.style.stroke = colorNota(nota)
+
   document.querySelector(".nota").innerHTML = nota; // Inserindo nota na div
-  document.querySelector(".circle-2").style.strokeDashoffset =
-    640 - 640 * (nota / 10); // atualizando circulo de progresso
+  circle.style.strokeDashoffset = 640 - 640 * (nota / 10); // atualizando circulo de progresso
 };
 
 
+const colorNota = (nota) => {
+  let color;
+
+  if (nota < 2.5) {
+    color = 'FF2727'
+  } else if (nota < 5) {
+    color = '#FF9C27'
+  } else if (nota < 7.5) {
+    color = '#FFF627'
+  } else if (nota <= 10) {
+    color = '#27FF3D'
+  }
+
+  return color
+}
 
 // Adiciona eventos a cada requisito em tela
 const addEventToTagInfo = () => {

@@ -30,6 +30,11 @@
   font-weight: 500;
 }
 
+@media (max-width: 990px) {
+  .titulo-xl {
+    font-size: 3rem;
+  }
+}
 @media (max-width: 768px) {
   .titulo-xl {
     font-size: 3rem;
