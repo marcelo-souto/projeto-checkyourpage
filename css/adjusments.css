@@ -105,6 +105,10 @@ textarea.input {
   resize: none;
 }
 
+#app main p {
+  max-width: 60ch;
+}
+
 .resultado {
   height: 0px;
   transition: .5s;

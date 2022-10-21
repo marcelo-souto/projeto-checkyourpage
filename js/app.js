@@ -43,7 +43,7 @@ const showOnScreen = (obj) => {
       notaInfo.append(eachNotaInfo);
     } else { // Se nao tiver
       let eachNotaInfo = document.createElement("li");
-      eachNotaInfo.innerHTML = `Não Encontramos ${item.requisito} no seu código;`;
+      eachNotaInfo.innerHTML = `Não Encontramos ${item.requisito} no seu código`;
 
       notaInfo.append(eachNotaInfo);
     }
