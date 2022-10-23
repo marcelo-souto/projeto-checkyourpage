@@ -26,7 +26,7 @@ export class Code {
 
   getMediaQueries() {
     let data = this._removeSpaces(this.css);
-    const regex = /@.*?\{+?.*?\}+?/gi;
+    const regex = /@media.*?\{+?.*?\}+?/gi;
     data = data.match(regex);
 
     if (!data) {
