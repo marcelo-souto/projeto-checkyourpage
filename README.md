@@ -7,6 +7,16 @@ Olá, quero apresentar a vocês o projeto Check Your Page, um website desenvolvi
 
 Para ver o projeto hospedado e rodando [clique aqui](https://marcelo-souto.github.io/projeto-checkyourpage/)
 
+## Foco do projeto
+
+Nossa aplicação tem como base a tríade de boas práticas recomendadas pelo Google, focadas em responsividade, acessibilidade e semântica. Nossa ferramenta checa o seu código e devolve uma nota, sendo ela baseada:
+- utilização de tags semânticas contidas no seu site;
+- de meta tags de descrição e responsividade;
+- de atributos de acessibilidade nas tags;
+- utilização de media-queries na estilização no CSS.
+
+Acesse o guia do projeto [aqui](https://marcelo-souto.github.io/projeto-checkyourpage/instrucao.html) e/ou teste nossa aplicação por este [link](https://marcelo-souto.github.io/projeto-checkyourpage/app.html)
+
 ## Tecnologias
 Desenvolvido utilizando:
 
@@ -36,4 +46,4 @@ Através desse projeto podemos colocar em prática a utilização do framework B
 - [@pires01](https://github.com/pires01)
 
 ## Agradecimentos Especiais
-Queremos agradecer ao programa Programadores Cariocas desenvolvido pela Prefeitura do RJ, ao SENAC RJ, a escola de programação Resilia e os facilitadores que têm possibilitado e nos ajudado para que esse projeto possa existir.
+Queremos agradecer ao programa Programadores Cariocas desenvolvido pela Prefeitura do RJ, ao [SENAC RJ](https://www.senac.br/), a escola de programação [Resilia](https://www.resilia.com.br/) e os facilitadores que têm possibilitado e nos ajudado para que esse projeto possa existir.
