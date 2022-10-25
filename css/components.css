@@ -61,6 +61,7 @@ a {
 
 .btn-2:hover {
   background-color: #202020;
+  color: #787878 !important;
 }
 
 .btn-voltar-cima {
@@ -99,7 +100,7 @@ a {
 
 .user-options a:last-child {
   color: #000000;
-  background-color: transparent;
+  background-color: transparent !important;
   border: 1px solid #000000;
 }
 
